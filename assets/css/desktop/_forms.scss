@@ -1,0 +1,70 @@
+// main: ../style.scss
+@import '../global/vars';
+@import '../global/mixin'; // forms
+
+.form-hold {
+	margin: 10px 0;
+
+	label {
+		font-size: $paragraph-size-desktop;
+		line-height: $paragraph-lineheight-desktop;
+		margin-bottom: 5px;
+	}
+
+	.wpcf7-list-item {
+		label {
+			font-size: $h5-size-desktop;
+			line-height: $h5-lineheight-desktop;
+		}
+	}
+
+	p {
+		font-size: $h5-size-desktop;
+		line-height: $h5-lineheight-desktop;
+		margin-bottom: 5px;
+		border: none;
+	}
+
+	input[type=date],
+	input[type=email],
+	input[type=file],
+	input[type=number],
+	input[type=range],
+	input[type=tel],
+	input[type=text],
+	input[type=url] {
+		font-size: $h5-size-desktop;
+		line-height: $h5-lineheight-desktop;
+		margin: 5px 0 25px;
+	}
+
+	input[type=checkbox],
+	input[type=radio] {
+		margin-bottom: 5px;
+
+		&:before {
+			position: relative;
+			top: 4px;
+			font-size: calc(#{$h5-size-desktop} * 1.5);
+		}
+	}
+
+	textarea {
+		font-size: $h5-size-desktop;
+		line-height: $h5-lineheight-desktop;
+		line-height: 18px;
+		margin: 5px 0 25px;
+	}
+
+	select {
+		font-size: $h5-size-desktop;
+		line-height: 18px;
+		margin: 5px 0 25px;
+	}
+
+	input[type=submit] {
+		font-size: $cta1-size-desktop;
+		line-height: $cta1-lineheight-desktop;
+		font-weight: $font-weight-3;
+	}
+}

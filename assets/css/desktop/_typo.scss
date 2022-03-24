@@ -1,0 +1,335 @@
+// main: ../style.scss
+@import '../global/vars';
+@import '../global/mixin';
+
+.as-h1,
+h1 {
+  font-size: $h1-size-desktop;
+  line-height: $h1-lineheight-desktop;
+  margin-bottom: $h1-marginbottom-desktop;
+  position: relative;
+
+  .underline-green {
+    white-space: nowrap;
+    position: relative;
+
+    &:before {
+      content: "";
+      position: absolute;
+      z-index: -1;
+      bottom: 5px;
+      left: -5px;
+      width: calc(100% + 10px);
+      height: 16px;
+      background-color: $color-6;
+      @include define-border-radius(16px);
+    }
+  }
+
+  .underline-yellow {
+    white-space: nowrap;
+    position: relative;
+
+    &:before {
+      content: "";
+      position: absolute;
+      z-index: -1;
+      bottom: 5px;
+      left: -5px;
+      width: calc(100% + 10px);
+      height: 16px;
+      background-color: $color-7;
+      @include define-border-radius(16px);
+    }
+  }
+
+  .underline-blue {
+    white-space: nowrap;
+    position: relative;
+
+    &:before {
+      content: "";
+      position: absolute;
+      z-index: -1;
+      bottom: 5px;
+      left: -5px;
+      width: calc(100% + 10px);
+      height: 16px;
+      background-color: $color-5;
+      @include define-border-radius(16px);
+    }
+  }
+
+  .underline-red {
+    white-space: nowrap;
+    position: relative;
+
+    &:before {
+      content: "";
+      position: absolute;
+      z-index: -1;
+      bottom: 5px;
+      left: -5px;
+      width: calc(100% + 10px);
+      height: 16px;
+      background-color: $color-9;
+      @include define-border-radius(16px);
+    }
+  }
+}
+
+.as-h2,
+h2 {
+  font-size: $h2-size-desktop;
+  line-height: $h2-lineheight-desktop;
+  margin-bottom: $h2-marginbottom-desktop;
+}
+
+.as-h3,
+h3 {
+  font-size: $h3-size-desktop;
+  line-height: $h3-lineheight-desktop;
+  margin-bottom: $h3-marginbottom-desktop;
+}
+
+.as-h4,
+h4 {
+  font-size: $h4-size-desktop;
+  line-height: $h4-lineheight-desktop;
+  margin-bottom: $h4-marginbottom-desktop;
+}
+
+.as-h5,
+h5 {
+  font-size: $h5-size-desktop;
+  line-height: $h5-lineheight-desktop;
+  margin-bottom: $h5-marginbottom-desktop;
+}
+
+.topic-title {
+  &:before {
+    position: relative;
+    top: 4px;
+    display: inline-block;
+    content: "";
+    width: 16px;
+    height: 22px;
+    margin-right: 5px;
+    background-image: url("assets/images/kleecks-features-title.svg");
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+}
+
+.mega-menu-links-columns-link {
+  font-size: $h5-size-desktop;
+  line-height: $h5-lineheight-desktop;
+  font-weight: $font-weight-2;
+}
+
+.as-h6,
+h6 {
+  font-size: $h6-size-desktop;
+  line-height: $h6-lineheight-desktop;
+  margin-bottom: $h6-marginbottom-desktop;
+}
+
+p {
+  font-size: $paragraph-size-desktop;
+  line-height: $paragraph-lineheight-desktop;
+  margin: 0 0 $paragraph-marginbottom-desktop;
+  padding: 0;
+}
+
+.cta-1 {
+  font-size: $cta1-size-desktop;
+  line-height: $cta1-lineheight-desktop;
+}
+
+.cta-2,
+.mega-menu,
+.menu,
+.navigation {
+  font-size: $cta2-size-desktop;
+  line-height: $cta2-lineheight-desktop;
+}
+
+.text-handwritten {
+  font-size: $hadwritten1-size-desktop;
+  line-height: $hadwritten1-lineheight-desktop;
+}
+
+.text-extra-1 {
+  font-size: $extra1-size-desktop;
+  line-height: $extra1-lineheight-desktop;
+}
+
+.text-extra-2 {
+  font-size: $extra2-size-desktop;
+  line-height: $extra2-lineheight-desktop;
+}
+
+.content-styled {
+  h1:not(:first-child) {
+    margin-top: calc(#{$h1-marginbottom-desktop} * 2);
+  }
+
+  h2:not(:first-child) {
+    margin-top: calc(#{$h2-marginbottom-desktop} * 2);
+  }
+
+  h3:not(:first-child) {
+    margin-top: calc(#{$h3-marginbottom-desktop} * 2);
+  }
+
+  h4:not(:first-child) {
+    margin-top: calc(#{$h4-marginbottom-desktop} * 2);
+  }
+
+  h5:not(:first-child) {
+    margin-top: calc(#{$h5-marginbottom-desktop} * 2);
+  }
+
+  h6:not(:first-child) {
+    margin-top: calc(#{$h6-marginbottom-desktop} * 2);
+  }
+
+  ul {
+    font-size: $paragraph-size-desktop;
+    line-height: $paragraph-lineheight-desktop;
+    margin-bottom: $paragraph-marginbottom-desktop;
+
+    li {
+      display: table-row;
+
+      &:before {
+        font-size: 20px;
+        font-weight: $font-weight-1;
+      }
+    }
+  }
+
+  ol {
+    font-size: $paragraph-size-desktop;
+    line-height: $paragraph-lineheight-desktop;
+    margin-bottom: $paragraph-marginbottom-desktop;
+  }
+
+  ol > li {
+    &:before {
+      font-family: $font-main;
+      font-size: $paragraph-size-desktop;
+    }
+  }
+}
+
+.wp-caption-text,
+.wp-caption.aligncenter .wp-caption-text,
+.wp-caption.alignleft .wp-caption-text,
+.wp-caption.alignnone .wp-caption-text,
+.wp-caption.alignright .wp-caption-text {
+  padding: 5px 0 0;
+  font-size: $cta1-size-desktop;
+  line-height: $cta1-lineheight-desktop;
+  word-wrap: break-word;
+  font-style: italic;
+}
+
+.expander {
+  font-family: $font-main;
+  font-weight: $font-weight-1;
+  font-size: $h4-size-desktop;
+  line-height: $h4-lineheight-desktop;
+}
+
+.title-arrows-area-top {
+  position: relative;
+
+  &.space-opening-arrow-top-left {
+    min-height: 150px;
+  }
+
+  &.space-opening-arrow-top-right {
+    min-height: 70px;
+  }
+
+  &.space-opening-arrow-top-left.space-opening-arrow-top-right {
+    min-height: 150px;
+  }
+
+  div[class*="title-arrow"] {
+    position: absolute;
+    background-repeat: no-repeat;
+  }
+
+  .title-arrow-top-left {
+    height: 150px;
+    width: 220px;
+    bottom: 0;
+    left: 20px;
+    padding: 0 0 0 80px;
+    background-image: url("assets/images/arrow-top-left.svg");
+    background-position: 0 10px;
+    background-size: auto calc(100% - 10px);
+  }
+
+  .title-arrow-top-right {
+    height: 70px;
+    width: 220px;
+    bottom: 0;
+    left: 240px;
+    padding: 0 70px 0 0;
+    background-image: url("assets/images/arrow-top-right.svg");
+    background-position: right 10px;
+    background-size: auto calc(100% - 10px);
+  }
+}
+
+.title-arrows-area-bottom {
+  position: relative;
+
+  div[class*="title-arrow"] {
+    position: absolute;
+    background-repeat: no-repeat;
+  }
+
+  .title-arrow-bottom-right {
+    height: 140px;
+    width: 233px;
+    top: 0;
+    left: 190px;
+    //padding: 0 130px 0 0;
+    background-image: url("assets/images/arrow-bottom-right.svg");
+    background-position: calc(100% + 20px) 0;
+    background-size: auto 100%;
+
+    span {
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 115px;
+    }
+  }
+}
+
+.checklist {
+  position: relative;
+  display: block;
+  width: 100%;
+  margin: 40px 0 0;
+
+  li {
+    background-image: url("assets/images/kleecks-checklist-item.svg");
+    background-position: 0 0;
+    background-size: 54px 46px;
+    background-repeat: no-repeat;
+    padding: 0 0 0 75px;
+    margin: 0 0 40px;
+    min-height: 46px;
+
+    h4 {
+      margin-bottom: 16px;
+    }
+  }
+}

@@ -1,0 +1,80 @@
+// compileExpanded: style-expanded.css, compileCompressed: ../../style.min.css
+// imports
+@import 'global/vars';
+@import 'global/reset';
+@import 'global/defaults';
+@import 'global/header-footer';
+@import 'global/colors'; //@import 'global/colors-black-bg';
+//@import 'global/colors-white-bg';
+@import 'global/typo';
+@import 'global/wrappers';
+@import 'global/grids';
+@import 'global/modules';
+@import 'global/buttons';
+@import 'global/ctas';
+@import 'global/images';
+@import 'global/forms'; // imports mobile
+@media screen and (min-width: $break-mobile-start) and (max-width: $break-tablet-end) {
+  @import 'mobile/header-footer';
+  @import 'mobile/typo';
+  @import 'mobile/page-opening';
+  @import 'mobile/wrappers';
+  @import 'mobile/grids';
+  @import 'mobile/module-text';
+  @import 'mobile/module-stripe';
+  //@import 'mobile/module-highlighted-sentence';
+  @import 'mobile/module-columns';
+  @import 'mobile/module-columns-fix-column';
+  @import 'mobile/module-slideshow';
+  //@import 'mobile/module-fullscreen-image';
+  //@import 'mobile/module-expanding-text';
+  @import 'mobile/module-banner';
+  @import 'mobile/ctas';
+  @import 'mobile/images';
+  @import 'mobile/effects';
+  @import 'mobile/forms';
+  @import 'mobile/slideshows';
+  @import 'mobile/modals';
+}
+// imports desktop
+@media screen and (min-width: $break-desktop) {
+  @import 'desktop/header-footer';
+  @import 'desktop/mega-menu';
+  @import 'desktop/typo';
+  @import 'desktop/page-opening';
+  @import 'desktop/wrappers';
+  @import 'desktop/grids';
+  @import 'desktop/listings';
+  @import 'desktop/module-text';
+  @import 'desktop/module-features';
+  @import 'desktop/module-columns';
+  @import 'desktop/module-stripe';
+  @import 'desktop/module-scrolling-text';
+  @import 'desktop/module-images';
+  @import 'desktop/module-key-questions';
+  @import 'desktop/module-columns-fix-column';
+  @import 'desktop/module-slideshow';
+  @import 'desktop/module-slideshow-logos';
+  @import 'desktop/module-jobs-listing';
+  @import 'desktop/module-banner';
+  @import 'desktop/module-kleecks';
+  //@import 'desktop/module-fullscreen-image';
+  //@import 'desktop/module-expanding-text';
+  //@import 'desktop/module-highlighted-sentence';
+  @import 'desktop/ctas';
+  @import 'desktop/images';
+  @import 'desktop/effects';
+  @import 'desktop/forms';
+  @import 'desktop/slideshows';
+  @import 'desktop/modals';
+}
+@import 'global/libraries/aos';
+@import 'global/libraries/slick';
+@import 'global/font-social-icons';
+@import 'global/font-kleecks-icons';
+@import 'global/pagenavi';
+@import 'global/cookies';
+@import 'global/admin-bar';
+@import 'global/mixin';
+@import 'global/modals'; //@import 'global/preload-animations';
+// @import 'global/visual-debug';

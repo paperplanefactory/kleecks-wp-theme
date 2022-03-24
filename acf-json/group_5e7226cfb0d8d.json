@@ -1,0 +1,221 @@
+{
+    "key": "group_5e7226cfb0d8d",
+    "title": "Impostazioni banner",
+    "fields": [
+        {
+            "key": "field_5e7226dcd61f6",
+            "label": "Testo CTA",
+            "name": "banner_cta_text",
+            "type": "text",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5e72279bd61f8",
+            "label": "Destinazione CTA",
+            "name": "banner_cta_target",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "cta-target-internal": "Contenuto interno al sito",
+                "cta-target-external": "Contenuto esterno al sito",
+                "cta-target-file": "File",
+                "cta-target-modal": "Modal"
+            },
+            "default_value": false,
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 0,
+            "return_format": "value",
+            "ajax": 0,
+            "placeholder": ""
+        },
+        {
+            "key": "field_5e7227c9d61f9",
+            "label": "Scegli un contenuto",
+            "name": "banner_cta_target_internal",
+            "type": "relationship",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5e72279bd61f8",
+                        "operator": "==",
+                        "value": "cta-target-internal"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "post_type": [
+                "post",
+                "page"
+            ],
+            "taxonomy": "",
+            "filters": [
+                "search",
+                "post_type",
+                "taxonomy"
+            ],
+            "elements": [
+                "featured_image"
+            ],
+            "min": 1,
+            "max": 1,
+            "return_format": "id"
+        },
+        {
+            "key": "field_61890d476e576",
+            "label": "Parametro aggiuntivo URL",
+            "name": "banner_cta_target_internal_parameter",
+            "type": "text",
+            "instructions": "Es.: #anchor-point o ?parametro=valore o \/category\/nome-categoria\/",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5e72279bd61f8",
+                        "operator": "==",
+                        "value": "cta-target-internal"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5e7239a9e12c4",
+            "label": "Inserisci una URL",
+            "name": "banner_cta_target_external",
+            "type": "url",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5e72279bd61f8",
+                        "operator": "==",
+                        "value": "cta-target-external"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": ""
+        },
+        {
+            "key": "field_5e7239c8e12c5",
+            "label": "Scegli il file",
+            "name": "banner_cta_target_file",
+            "type": "file",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5e72279bd61f8",
+                        "operator": "==",
+                        "value": "cta-target-file"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "url",
+            "library": "all",
+            "min_size": "",
+            "max_size": "",
+            "mime_types": ""
+        },
+        {
+            "key": "field_61d5a7e6ac60d",
+            "label": "Scegli modal",
+            "name": "banner_cta_modal",
+            "type": "post_object",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5e7226dcd61f6",
+                        "operator": "!=empty"
+                    },
+                    {
+                        "field": "field_5e72279bd61f8",
+                        "operator": "==",
+                        "value": "cta-target-modal"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "post_type": [
+                "cpt_modal"
+            ],
+            "taxonomy": "",
+            "allow_null": 0,
+            "multiple": 0,
+            "return_format": "id",
+            "ui": 1
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "cpt_banner"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "acf_after_title",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1647962935
+}

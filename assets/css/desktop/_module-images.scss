@@ -1,0 +1,43 @@
+// main: ../style.scss
+@import '../global/vars';
+@import '../global/mixin';
+
+.module-images {
+  .module-paddings-top {
+    padding-top: $module-vertical-padding-desktop;
+  }
+
+  .module-paddings-top-double {
+    padding-top: calc(#{$module-vertical-padding-desktop} * 2);
+  }
+
+  .module-no-paddings-top {
+    padding-top: 0;
+  }
+
+  .module-paddings-bottom {
+    padding-bottom: $module-vertical-padding-desktop;
+  }
+
+  .module-paddings-bottom-double {
+    padding-bottom: calc(#{$module-vertical-padding-desktop} * 2);
+  }
+
+  .module-no-paddings-bottom {
+    padding-bottom: 0;
+  }
+
+  .one-image {}
+
+  .no-the-100 {
+    margin-bottom: 10px;
+  }
+
+  h5 {
+    margin-bottom: 10px;
+  }
+
+  h6 {
+    font-weight: $font-weight-1;
+  }
+}

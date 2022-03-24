@@ -1,0 +1,40 @@
+{
+    "key": "group_62346b781cfdc",
+    "title": "Contenuti header",
+    "fields": [
+        {
+            "key": "field_62346b918f5b1",
+            "label": "Link Book a Demo",
+            "name": "link_book_demo",
+            "type": "link",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array"
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": "gestione-footer-any-lang"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1647602609
+}

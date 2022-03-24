@@ -1,0 +1,164 @@
+{
+    "key": "group_5e7636b4e2eb3",
+    "title": "Theme options",
+    "fields": [
+        {
+            "key": "field_5e7636cba2ac3",
+            "label": "Theme version",
+            "name": "theme_version",
+            "type": "text",
+            "instructions": "For quick cache problem solving change theme version here. Use something like 1.2.1",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5e835c840223a",
+            "label": "Larghezza header",
+            "name": "theme_header_width",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "full-width": "Fullscreen - meno i margini minimi previsti",
+                "contained-width": "Larghezza massima basata sul contenitore principale"
+            },
+            "default_value": [],
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 0,
+            "return_format": "value",
+            "ajax": 0,
+            "placeholder": ""
+        },
+        {
+            "key": "field_5e83607841c0b",
+            "label": "Larghezza footer",
+            "name": "theme_footer_width",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "full-width": "Fullscreen - meno i margini minimi previsti",
+                "contained-width": "Larghezza massima basata sul contenitore principale"
+            },
+            "default_value": [],
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 0,
+            "return_format": "value",
+            "ajax": 0,
+            "placeholder": ""
+        },
+        {
+            "key": "field_616ff1b2505f2",
+            "label": "Tipo di paginazione contenuti",
+            "name": "theme_pagination",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "theme-pagenavi": "Paginazione classica con PageNavi",
+                "theme-infinite-scroll": "Infinite Scroll con bottone \"carica altri contenuti\""
+            },
+            "default_value": false,
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 0,
+            "return_format": "value",
+            "ajax": 0,
+            "placeholder": ""
+        },
+        {
+            "key": "field_6189679ab7c84",
+            "label": "Schema colori pagine archivio",
+            "name": "theme_archive_page_color_scheme",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "colors-white-bg": "Sfondo bianco - testi neri",
+                "colors-black-bg": "Sfondo nero - testi bianchi",
+                "colors-grey-bg": "Sfondo grigio - testi neri"
+            },
+            "default_value": false,
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 0,
+            "return_format": "value",
+            "ajax": 0,
+            "placeholder": ""
+        },
+        {
+            "key": "field_61e819870fa9f",
+            "label": "Opzioni per utilizzare script esterni",
+            "name": "theme_external_scripts",
+            "type": "true_false",
+            "instructions": "Scegliere se attivare la pagina di opzioni per aggiungere script esterni (Google Analytics, Facebook Pixel...).<br \/>\r\nIn caso di siti multilingua gli script, anche se identici, andranno inseriti nella pagina opzioni di ogni lingua.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 1,
+            "ui_on_text": "Attiva",
+            "ui_off_text": "Disattiva"
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": "theme-general-settings"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1647612999
+}

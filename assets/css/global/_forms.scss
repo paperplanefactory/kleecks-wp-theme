@@ -1,0 +1,292 @@
+// main: ../style.scss
+@import 'vars';
+@import 'mixin'; // forms
+
+.form-hold {
+	position: relative;
+	display: block;
+	width: 100%;
+
+	input[type=checkbox],
+	input[type=radio] {
+		-webkit-appearance: none;
+		-moz-appearance: none;
+		appearance: none;
+
+		&:before {
+			font-family: 'Material Icons';
+			font-weight: normal;
+			font-style: normal;
+			display: inline-block;
+			line-height: 1;
+			text-transform: none;
+			letter-spacing: normal;
+			word-wrap: normal;
+			white-space: nowrap;
+			direction: ltr;
+			-webkit-font-smoothing: antialiased;
+			text-rendering: optimizeLegibility;
+			-moz-osx-font-smoothing: grayscale;
+			font-feature-settings: 'liga';
+			color: $color-1;
+		}
+	}
+
+	input[type=radio] {
+		&:before {
+			content: "\e836";
+		}
+
+		&:checked {
+			&:before {
+				content: "\e837";
+			}
+		}
+	}
+
+	input[type=checkbox] {
+		&:before {
+			content: "\e835";
+		}
+
+		&:checked {
+			&:before {
+				content: "\e834";
+			}
+		}
+	}
+
+	input[type=date],
+	input[type=email],
+	input[type=file],
+	input[type=number],
+	input[type=password],
+	input[type=range],
+	input[type=tel],
+	input[type=text],
+	input[type=url],
+	p,
+	select,
+	textarea {
+		font-family: $font-main;
+		font-weight: $font-weight-1;
+		border: $color-2 solid 1px;
+		color: $color-1;
+		background-color: $color-4;
+	}
+
+	input[type=file] {
+		position: relative;
+		text-align: left;
+		display: block;
+		margin-top: 10px;
+		font-family: $font-main;
+		font-weight: $font-weight-1;
+
+		&::-webkit-file-upload-button,
+		&::file-selector-button {
+			font-family: $font-main;
+			font-weight: $font-weight-1;
+			padding: 8px 9px 8px 38px;
+			border-radius: 4px;
+			margin-right: 10px;
+			background-color: transparent;
+			transition: 1s;
+			background-position: 8px 50%;
+			background-repeat: no-repeat;
+			background-size: 25px 25px;
+			cursor: pointer;
+			color: $color-1;
+			border: 1px solid $color-1;
+			background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' enable-background='new 0 0 24 24' height='24px' viewBox='0 0 24 24' width='24px' fill='none'><g><rect height='24' width='24'/></g><g><path fill='#{$color-upload-icon-dark}' d='M18,15v3H6v-3H4v3c0,1.1,0.9,2,2,2h12c1.1,0,2-0.9,2-2v-3H18z M7,9l1.41,1.41L11,7.83V16h2V7.83l2.59,2.58L17,9l-5-5L7,9z'/></g></svg>");
+		}
+
+		&:hover {
+			&::-webkit-file-upload-button,
+			&::file-selector-button {
+				color: $color-4;
+				border: 1px solid $color-4;
+				background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' enable-background='new 0 0 24 24' height='24px' viewBox='0 0 24 24' width='24px' fill='none'><g><rect height='24' width='24'/></g><g><path fill='#{$color-upload-icon-clear}' d='M18,15v3H6v-3H4v3c0,1.1,0.9,2,2,2h12c1.1,0,2-0.9,2-2v-3H18z M7,9l1.41,1.41L11,7.83V16h2V7.83l2.59,2.58L17,9l-5-5L7,9z'/></g></svg>");
+				background-color: $color-1;
+			}
+		}
+	}
+
+	label {
+		color: $color-8;
+		font-weight: $font-weight-3;
+	}
+
+	.wpcf7-list-item {
+		label {
+			color: $color-1;
+			font-weight: $font-weight-1;
+		}
+	}
+
+	p {
+		position: relative;
+		display: block;
+		width: 100%;
+		margin-left: 0;
+		font-weight: $font-weight-1;
+	}
+
+	.wpcf7-form-control-wrap {
+		.wpcf7-list-item {
+			margin: 0 !important;
+		}
+
+		&.form-checkbox,
+		&.form-radio {
+			display: block;
+			padding: 0 !important;
+			margin-bottom: 10px !important;
+
+			.wpcf7-list-item {
+				margin: 0 10px 10px 0 !important;
+
+				&:last-child {
+					margin: 0 0 10px 0 !important;
+				}
+			}
+		}
+	}
+
+	input[type=date],
+	input[type=email],
+	input[type=number],
+	input[type=password],
+	input[type=range],
+	input[type=tel],
+	input[type=text],
+	input[type=url],
+	textarea {
+		position: relative;
+		width: calc(100% - 2px);
+		//margin: 10px 0 0;
+		padding: 10px;
+		background-color: transparent;
+	}
+
+	select {
+		position: relative;
+		width: calc(100% - 2px);
+		//margin: 10px 0 0;
+		padding: 10px;
+	}
+
+	textarea {
+		width: calc(100% - 2px);
+		height: 100px;
+		//margin: 10px 0 0;
+		padding: 10px;
+		resize: none;
+	}
+
+	input[type=submit] {
+		position: relative;
+		display: inline-block;
+		padding: 14px 22px;
+		@include define-border-radius(24px);
+		text-align: center;
+		text-decoration: none !important;
+		min-width: 100px;
+		max-width: 250px;
+		margin: 20px 0 0;
+		border: none;
+		cursor: pointer;
+		@include define-basic-transition(all, 0.3s);
+		white-space: normal;
+		text-transform: uppercase;
+		-webkit-appearance: none;
+		color: $color-8 !important;
+		background-color: $color-7 !important;
+
+		&:hover {
+			color: $color-4 !important;
+			background-color: $color-5 !important;
+		}
+	}
+
+	input[type=submit]:disabled {
+		opacity: 0.7;
+	}
+
+	input[type=date]:focus,
+	input[type=email]:focus,
+	input[type=number]:focus,
+	input[type=password]:focus,
+	input[type=range]:focus,
+	input[type=tel]:focus,
+	input[type=text]:focus,
+	input[type=url]:focus,
+	select:focus,
+	textarea:focus {
+		border-color: $color-form-ok;
+		@include define-basic-transition(all, 0.3s);
+	}
+
+	.wpcf7-not-valid {
+		border-color: $color-form-error !important;
+	}
+
+	.wpcf7-not-valid-tip {
+		display: block !important;
+		z-index: 99 !important;
+		width: calc(100% - 20px) !important;
+		background-color: $color-form-error !important;
+		color: $color-1 !important;
+		border: none !important;
+		left: 0 !important;
+		font-size: $cta1-size-desktop !important;
+		font-weight: $font-weight-1 !important;
+		text-transform: uppercase;
+		padding: 10px !important;
+	}
+}
+
+.wpcf7-form {
+	.wpcf7-not-valid-tip {
+		position: relative;
+		border: none !important;
+		z-index: 10;
+		width: calc(100% - 32px) !important;
+		top: -16px !important;
+		padding: 3px 5px;
+		margin: 0 0 10px 0 !important;
+		color: $color-4 !important;
+		background-color: $color-form-error !important;
+		text-transform: uppercase;
+		font-size: $cta1-size-desktop !important;
+		line-height: $cta1-size-desktop !important;
+		font-weight: $font-weight-2 !important;
+	}
+
+	.wpcf7-response-output {
+		position: relative;
+		border: none !important;
+		z-index: 10;
+		width: calc(100% - 20px) !important;
+		padding: 12px 10px !important;
+		margin: 0 0 10px 0 !important;
+		text-transform: uppercase;
+		font-size: $cta1-size-desktop !important;
+		line-height: $cta1-size-desktop !important;
+		font-weight: $font-weight-2 !important;
+	}
+
+	&.invalid {
+		.wpcf7-response-output {
+			color: $color-4;
+			background-color: $color-form-error;
+		}
+	}
+
+	&.sent {
+		.wpcf7-response-output {
+			color: $color-4;
+			background-color: $color-form-ok;
+		}
+	}
+}

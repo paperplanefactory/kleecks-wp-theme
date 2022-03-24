@@ -1,0 +1,281 @@
+// main: ../style.scss
+@import 'vars';
+@import 'mixin'; // hamburger
+
+.colors-black-bg {
+  color: $color-4;
+  background-color: $color-1;
+
+  .above-image-opacity {
+    background-color: rgba(0, 0, 0, 0.6);
+  }
+
+  a:link,
+  a:visited {
+    color: $color-4;
+  }
+
+  a:active,
+  a:hover {
+    color: $color-3;
+  }
+
+  .hambuger-element {
+    span {
+      background-color: $color-4;
+    }
+
+    &:hover {
+      span {
+        background-color: $color-3;
+      }
+    }
+  }
+
+  .current-mega-menu {
+    &:after {
+      background-color: $color-4;
+    }
+  }
+
+  .sub-menu {
+    color: $color-2 !important;
+    background-color: $color-3;
+
+    li {
+      border-bottom: $color-4 solid 1px;
+
+      a {
+        &:link,
+        &:visited {
+          color: $color-1;
+        }
+
+        &:hover {
+          color: $color-2;
+        }
+      }
+    }
+  }
+
+  .overlay-menu-mobile-css {
+    border-top: solid 1px $color-2 !important;
+
+    li {
+      border-bottom: solid 1px $color-2 !important;
+    }
+
+    .sub-menu {
+      background-color: $color-2;
+
+      li {
+        border-top: solid 1px $color-1 !important;
+
+        a {
+          &:link,
+          &:visited {
+            color: $color-4;
+          }
+
+          &:hover {
+            color: $color-4;
+          }
+        }
+      }
+    }
+  }
+
+  .cta-navi a,
+  .default-button {
+    color: $color-1 !important;
+    background-color: $color-3 !important;
+
+    &:hover {
+      color: $color-1 !important;
+      background-color: $color-4 !important;
+    }
+  }
+
+  .default-button-b {
+    color: $color-4;
+
+    &:hover {
+      color: $color-3;
+    }
+  }
+
+  .slick-next,
+  .slick-prev {
+    color: $color-4;
+  }
+
+  .slick-dots {
+    li {
+      button {
+        background-color: $color-2;
+
+        &:hover {
+          background-color: $color-4;
+        }
+      }
+
+      &.slick-active {
+        button {
+          background-color: $color-4;
+        }
+      }
+    }
+  }
+
+  .slide-double,
+  .slide-single {
+    &:after,
+    &:before {
+      background-color: rgba(0, 0, 0, 0.75);
+    }
+  }
+
+  .expander {
+    color: $color-4;
+
+    &:hover {
+      color: $color-3;
+    }
+  }
+
+  .scroll-down {
+    background-color: $color-4;
+    color: $color-1;
+
+    a {
+      color: $color-1;
+    }
+  }
+
+  ::-webkit-input-placeholder {
+    color: $color-3;
+  }
+
+  :-moz-placeholder {
+    color: $color-3;
+  }
+
+  ::-moz-placeholder {
+    color: $color-3;
+  }
+
+  label {
+    color: $color-4;
+  }
+
+  input[type=date],
+  input[type=email],
+  input[type=number],
+  input[type=password],
+  input[type=tel],
+  input[type=text],
+  input[type=url],
+  select,
+  textarea {
+    border: $color-3 solid 1px;
+    color: $color-4;
+    background-color: $color-1;
+  }
+
+  input[type=checkbox],
+  input[type=radio] {
+    &:before {
+      color: $color-4;
+    }
+  }
+
+  input[type=file] {
+    &::-webkit-file-upload-button,
+    &::file-selector-button {
+      color: $color-4;
+      border: 1px solid $color-4;
+      background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' enable-background='new 0 0 24 24' height='24px' viewBox='0 0 24 24' width='24px' fill='none'><g><rect height='24' width='24'/></g><g><path fill='#{$color-upload-icon-clear}' d='M18,15v3H6v-3H4v3c0,1.1,0.9,2,2,2h12c1.1,0,2-0.9,2-2v-3H18z M7,9l1.41,1.41L11,7.83V16h2V7.83l2.59,2.58L17,9l-5-5L7,9z'/></g></svg>");
+    }
+
+    &:hover {
+      &::-webkit-file-upload-button,
+      &::file-selector-button {
+        color: $color-1;
+        border: 1px solid $color-1;
+        background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' enable-background='new 0 0 24 24' height='24px' viewBox='0 0 24 24' width='24px' fill='none'><g><rect height='24' width='24'/></g><g><path fill='#{$color-upload-icon-dark}' d='M18,15v3H6v-3H4v3c0,1.1,0.9,2,2,2h12c1.1,0,2-0.9,2-2v-3H18z M7,9l1.41,1.41L11,7.83V16h2V7.83l2.59,2.58L17,9l-5-5L7,9z'/></g></svg>");
+        background-color: $color-4;
+      }
+    }
+  }
+
+  input[type=submit] {
+    color: $color-1 !important;
+    background-color: $color-3 !important;
+
+    &:hover {
+      color: $color-1 !important;
+      background-color: $color-4 !important;
+    }
+  }
+
+  .content-styled {
+    ul {
+      li {
+        &:before {
+          color: $color-3;
+        }
+      }
+    }
+
+    ol > li {
+      &:before {
+        color: $color-3;
+      }
+    }
+  }
+
+  .expanding-block {
+    border-bottom: solid 1px $color-3;
+  }
+
+  ::-moz-selection {
+    background: $color-3;
+    color: $color-1;
+  }
+
+  ::selection {
+    background: $color-3;
+    color: $color-1;
+  }
+
+  ::-moz-selection {
+    background: $color-3;
+    color: $color-1;
+  }
+
+  ::-webkit-selection {
+    background: $color-3;
+    color: $color-1;
+  }
+
+  &.paperplane-modal {
+    background-color: rgba(0,0,0,0.8);
+
+    .modal-box,
+    .modal-title {
+      background-color: $color-1;
+    }
+
+    .modal-box {
+      &:after {
+        background-color: $color-1;
+      }
+    }
+
+    .modal-close-button {
+      .svg-button-line {
+        stroke: $color-4;
+      }
+    }
+  }
+}

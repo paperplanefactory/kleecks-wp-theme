@@ -1,0 +1,125 @@
+// main: ../style.scss
+@import '../global/vars';
+@import '../global/mixin';
+
+.module-features {
+  .module-paddings-top {
+    padding-top: $module-vertical-padding-desktop;
+  }
+
+  .module-paddings-top-double {
+    padding-top: calc(#{$module-vertical-padding-desktop} * 2);
+  }
+
+  .module-no-paddings-top {
+    padding-top: 0;
+  }
+
+  .module-paddings-bottom {
+    padding-bottom: $module-vertical-padding-desktop;
+  }
+
+  .module-paddings-bottom-double {
+    padding-bottom: calc(#{$module-vertical-padding-desktop} * 2);
+  }
+
+  .module-no-paddings-bottom {
+    padding-bottom: 0;
+  }
+
+  .flex-hold-features {
+    .feature-texts {
+      width: calc(100% - 810px);
+      padding-right: 30px;
+
+      h4 {
+        margin-bottom: 33px;
+      }
+    }
+
+    .feature-image {
+      width: 810px;
+    }
+  }
+
+  .features-contents {
+    display: block;
+    width: 100%;
+
+    li {
+      position: relative;
+      display: block;
+      border-bottom: solid 1px $color-2;
+      padding: 10px 0 26px 33px;
+      margin: 0 0 18px;
+
+      h2 {
+        margin-bottom: 0;
+      }
+
+      .activator {
+        cursor: pointer;
+
+        .activator-status {
+          color: $color-5;
+        }
+      }
+
+      .feature-text {
+        margin-top: 10px;
+        display: none;
+
+        p {
+          margin-bottom: 10px;
+        }
+      }
+
+      &:before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        display: block;
+        width: 12px;
+        height: calc(100% - 16px);
+        background-color: $color-8;
+        @include define-basic-transition(all, 0.3s);
+      }
+
+      &.active-feature {
+        &:before {
+          background-color: $color-6;
+        }
+
+        .activator {
+          pointer-events: none;
+        }
+      }
+
+      &:first-child {
+        .feature-text {
+          display: block;
+        }
+      }
+
+      &:last-child {
+        border-bottom: none;
+      }
+    }
+  }
+
+  .feature-picture {
+    position: relative;
+    top: 0;
+    opacity: 0;
+    @include define-basic-transition(all, 0.3s);
+
+    &.active-feature-picture {
+      opacity: 1;
+    }
+  }
+
+  .cta-holder {
+    margin: 32px 0 0;
+  }
+}

@@ -1,0 +1,267 @@
+// main: ../style.scss
+@import 'vars';
+@import 'mixin';
+
+a,
+abbr,
+acronym,
+applet,
+article,
+aside,
+audio,
+b,
+big,
+blockquote,
+body,
+canvas,
+caption,
+center,
+cite,
+code,
+dd,
+del,
+details,
+dfn,
+div,
+dl,
+dt,
+em,
+embed,
+fieldset,
+figcaption,
+figure,
+footer,
+form,
+header,
+hgroup,
+html,
+i,
+iframe,
+img,
+ins,
+kbd,
+label,
+legend,
+li,
+mark,
+menu,
+nav,
+object,
+ol,
+output,
+pre,
+q,
+ruby,
+s,
+samp,
+section,
+small,
+span,
+strike,
+strong,
+sub,
+summary,
+sup,
+table,
+tbody,
+td,
+tfoot,
+th,
+thead,
+time,
+tr,
+tt,
+u,
+ul,
+var,
+video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	vertical-align: baseline;
+}
+// Remove all the styles of the "User-Agent-Stylesheet", except for the 'display' property
+
+html {
+	line-height: 1.15;
+	-webkit-text-size-adjust: 100%;
+	scroll-behavior: smooth;
+}
+
+body {
+	font-family: $font-main;
+	line-height: 1;
+	overflow: overlay !important;
+	scrollbar-gutter: auto;
+	margin: 0;
+	background-color: $color-4;
+}
+
+main {
+	display: block;
+}
+
+*:focus {
+	outline: 0;
+}
+
+*,
+*::after,
+*::before {
+	outline: 0;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+ol,
+ul {
+	list-style: none;
+}
+
+blockquote,
+q {
+	quotes: none;
+}
+
+blockquote:after,
+blockquote:before,
+q:after,
+q:before {
+	content: '';
+	content: none;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+caption,
+td,
+th {
+	font-weight: normal;
+	text-align: left;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	clear: both;
+	margin: 0;
+	padding: 0;
+}
+
+a:focus {
+	outline: thin dotted;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+nav,
+section {
+	display: block;
+}
+
+audio,
+canvas,
+video {
+	display: inline-block;
+}
+
+audio:not([controls]) {
+	display: none;
+}
+
+del {
+	color: #333;
+}
+
+ins {
+	background: #fff9c0;
+	text-decoration: none;
+}
+
+hr {
+	background-color: #ccc;
+	border: 0;
+	height: 1px;
+	margin: 24px 24px 1.714285714rem;
+}
+
+sub,
+sup {
+	font-size: 75%;
+	line-height: 0;
+	position: relative;
+	vertical-align: baseline;
+}
+
+sup {
+	top: -0.5em;
+}
+
+sub {
+	bottom: -0.25em;
+}
+
+small {
+	font-size: smaller;
+}
+
+img {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	vertical-align: middle;
+	-ms-interpolation-mode: bicubic;
+	max-width: 100%;
+}
+/* Clearing floats */
+.clear:after,
+.format-status .entry-header:after,
+.wrapper:after {
+	clear: both;
+}
+
+.clear:after,
+.clear:before,
+.format-status .entry-header:after,
+.format-status .entry-header:before,
+.wrapper:after,
+.wrapper:before {
+	display: table;
+	content: "";
+}
+
+a {
+	text-decoration: none;
+	border: none;
+	outline: none !important;
+	@include define-basic-transition(all, 0.3s);
+}
+
+textarea {
+	white-space: revert;
+}
+
+::-webkit-input-placeholder {
+	color: $color-2;
+}
+
+:-moz-placeholder {
+	color: $color-2;
+}
+
+::-moz-placeholder {
+	color: $color-2;
+}

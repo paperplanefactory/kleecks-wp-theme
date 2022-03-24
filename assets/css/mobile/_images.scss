@@ -1,0 +1,33 @@
+// main: ../style.scss
+@import '../global/vars';
+@import '../global/mixin';
+
+.wp-caption.aligncenter,
+.wp-caption.alignnone {
+	margin-bottom: 15px;
+}
+
+.wp-caption.alignleft,
+.wp-caption.alignright {
+	width: 50% !important;
+	margin-bottom: 15px;
+}
+
+.wp-caption.alignleft {
+	float: left;
+	margin-right: 20px;
+}
+
+.wp-caption.alignright {
+	float: right;
+	margin-left: 20px;
+}
+
+.above-image-opacity {
+	position: absolute;
+	top: 0;
+	left: 0;
+	display: block;
+	width: 100%;
+	height: 100%;
+}

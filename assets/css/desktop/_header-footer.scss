@@ -1,0 +1,287 @@
+// main: ../style.scss
+@import '../global/vars';
+@import '../global/mixin';
+$logo-width: 200px;
+$hamburger-width: 180px; // header
+
+#preheader {
+  display: block;
+  height: $header-desktop-height;
+}
+
+#header {
+  height: $header-desktop-height;
+  background-color: $color-4;
+  border-bottom: solid 1px $color-2;
+
+  a:link,
+  a:visited {
+    color: $color-8;
+  }
+
+  a:active,
+  a:hover {
+    color: $color-5;
+  }
+
+  #header-structure {
+    width: 100%;
+    height: $header-desktop-height;
+
+    .logo {
+      width: $logo-width;
+      height: $header-desktop-height;
+
+      &:before {
+        top: 10px;
+        left: 0;
+        height: calc(100% - 20px);
+      }
+    }
+
+    .menu {
+      width: calc(100% - #{$logo-width} - #{$hamburger-width});
+
+      ul {
+        width: 100%;
+        @include flex-wrap;
+        @include flex-verticalize;
+        justify-content: center;
+
+        li {
+          position: relative;
+          display: inline-block;
+          margin: 0 0 0 5%;
+          text-align: left;
+
+          &.current-mega-menu {
+            &:after {
+              content: "";
+              position: absolute;
+              bottom: -27px;
+              left: 0;
+              display: block;
+              width: 100%;
+              height: 4px;
+            }
+          }
+
+          a {
+            //cursor: context-menu;
+            @include define-basic-transition(color, 0.3s);
+
+            &.mega-menu-js-trigger {
+              &:before {
+                position: relative;
+                font-family: "kleecks-icons" !important;
+                content: "\61";
+                font-size: 14px;
+                float: right;
+                margin-left: 5px;
+                color: $color-5;
+                transition: all 300ms cubic-bezier(0.785, 0.135, 0.150, 0.860);
+                /* easeInOutCirc */
+                transition-timing-function: cubic-bezier(0.785, 0.135, 0.150, 0.860);
+                transform-origin: center center;
+                top: 2px;
+                @include define-rotate(180);
+              }
+            }
+
+            &.current-mega-menu {
+              font-weight: $font-weight-4;
+
+              &:before {
+                top: 0;
+                @include define-rotate(0);
+              }
+            }
+          }
+
+          &.menu-item-has-children {
+            &.current-mega-menu {
+              a {
+                font-weight: $font-weight-4;
+
+                &:before {
+                  top: 0;
+                  @include define-rotate(0);
+                }
+              }
+            }
+          }
+
+          a {
+            &:after {
+              content: "";
+              position: absolute;
+              left: 0;
+              bottom: -10px;
+              width: 100%;
+              height: 20px;
+            }
+          }
+
+          &:first-child {
+            margin: 0;
+          }
+
+          &.menu-item-has-children {
+            padding: 0;
+
+            &:hover {
+              .sub-menu {
+                height: auto;
+                pointer-events: all;
+                opacity: 1;
+              }
+            }
+          }
+        }
+
+        .current-page-ancestor,
+        .current_page_item {}
+
+        .sub-menu {
+          position: absolute;
+          z-index: 9997 !important;
+          top: 30px;
+          left: 50%;
+          width: 220px;
+          margin-left: -110px;
+          padding: 30px 0 !important;
+          @include define-border-radius(12px);
+          text-align: left;
+          text-transform: none;
+          -webkit-box-shadow: 0 10px 20px 0 rgba(0,0,0,0.2);
+          -moz-box-shadow: 0 10px 20px 0 rgba(0,0,0,0.2);
+          box-shadow: 0 10px 20px 0 rgba(0,0,0,0.2);
+          opacity: 0;
+          pointer-events: none;
+          @include define-basic-transition(opacity, 0.15s);
+          overflow: hidden;
+          height: 0;
+
+          &.activated {
+            height: auto;
+            pointer-events: all;
+            opacity: 1;
+          }
+
+          li {
+            width: 100%;
+            padding: 0 0 10px;
+            margin: 0 0 10px;
+            text-align: center;
+
+            &:last-child {
+              border-bottom: none;
+              padding: 0;
+              margin: 0;
+            }
+
+            a {
+              display: inline-block;
+              width: calc(100% - 50px);
+              padding: 0 25px;
+              margin: 0;
+
+              &:before {
+                content: "";
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .side-head {
+      width: $hamburger-width;
+      text-align: right;
+
+      ul {
+        width: 100%;
+
+        li {
+          text-align: center !important;
+          display: inline-block;
+          margin: 0;
+
+          &.hamburger-li {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}
+
+#head-overlay {
+  display: none;
+  visibility: hidden;
+}
+
+.scroll-opportunity {
+  height: calc(100vh - #{$header-desktop-height});
+}
+// footer
+
+#footer {
+  padding-top: 80px;
+  padding-bottom: 25px;
+
+  .desktop-align-right {
+    text-align: right;
+  }
+
+  .footer-menu {
+    li {
+      margin-bottom: 10px;
+      font-size: $paragraph-size-desktop;
+      line-height: $paragraph-lineheight-desktop;
+
+      &.footer-as-h4 {
+        font-size: $h4-size-desktop;
+        line-height: $h4-lineheight-desktop;
+        font-weight: $font-weight-4;
+        margin-bottom: $h4-marginbottom-desktop;
+      }
+
+      &.footer-as-h5 {
+        font-size: $h5-size-desktop;
+        line-height: $h5-lineheight-desktop;
+        font-weight: $font-weight-4;
+        padding-top: 10px;
+      }
+
+      &.cta-navi {
+        padding-top: 10px;
+      }
+
+      &:last-child {
+        margin: 0;
+      }
+    }
+  }
+
+  .inline-socials {
+    margin: 150px 0 50px;
+  }
+
+  .footer-menu-bottom {
+    font-size: $h5-size-desktop;
+    line-height: $h5-lineheight-desktop;
+
+    li {
+      margin-right: 10px;
+    }
+  }
+
+  .desktop-align-right {
+    .footer-menu-bottom {
+      li {
+        margin-left: 10px;
+      }
+    }
+  }
+}

@@ -1,0 +1,73 @@
+// main: ../style.scss
+@import '../global/vars';
+@import '../global/mixin';
+
+.module-columns-fix-column {
+  .module-paddings-top {
+    padding-top: $module-vertical-padding-desktop;
+  }
+
+  .module-paddings-top-double {
+    padding-top: calc(#{$module-vertical-padding-desktop} * 2);
+  }
+
+  .module-no-paddings-top {
+    padding-top: 0;
+  }
+
+  .module-paddings-bottom {
+    padding-bottom: $module-vertical-padding-desktop;
+  }
+
+  .module-paddings-bottom-double {
+    padding-bottom: calc(#{$module-vertical-padding-desktop} * 2);
+  }
+
+  .module-no-paddings-bottom {
+    padding-bottom: 0;
+  }
+
+  .cta-holder {
+    text-align: center;
+    margin: 64px 0 0;
+  }
+
+  .module-column-box {
+    .column-image {
+      position: relative;
+      display: inline-block;
+      width: 100%;
+      //margin-bottom: 24px;
+      .image-rounder {
+        width: 250px;
+      }
+
+      .image-icon {
+        position: absolute;
+        left: 0;
+        top: 0;
+        display: inline-block;
+        width: 60px;
+      }
+    }
+
+    .content-styled {
+      color: $color-8;
+    }
+
+    .iconized {
+      padding-left: 80px;
+    }
+
+    .cta-holder {
+      text-align: inherit;
+      margin: 24px 0 0;
+    }
+  }
+
+  .flex-hold-2 {
+    .flex-hold-child {
+      margin-bottom: 32px;
+    }
+  }
+}

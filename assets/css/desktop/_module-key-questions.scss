@@ -1,0 +1,60 @@
+// main: ../style.scss
+@import '../global/vars';
+@import '../global/mixin';
+
+.module-key-questions {
+  .module-paddings-top {
+    padding-top: $module-vertical-padding-desktop;
+  }
+
+  .module-paddings-top-double {
+    padding-top: calc(#{$module-vertical-padding-desktop} * 2);
+  }
+
+  .module-no-paddings-top {
+    padding-top: 0;
+  }
+
+  .module-paddings-bottom {
+    padding-bottom: $module-vertical-padding-desktop;
+  }
+
+  .module-paddings-bottom-double {
+    padding-bottom: calc(#{$module-vertical-padding-desktop} * 2);
+  }
+
+  .module-no-paddings-bottom {
+    padding-bottom: 0;
+  }
+
+  .flex-hold-key-questions {
+    .key-questions {
+      width: 536px;
+      padding: 40px;
+    }
+
+    .key-questions-intro {
+      width: calc(100% - 536px);
+      padding: 30px 0 0 5vw;
+    }
+  }
+
+  .key-questions-list {
+    font-size: $paragraph-size-desktop;
+    line-height: $paragraph-lineheight-desktop;
+    font-weight: $font-weight-3;
+
+    li {
+      position: relative;
+      margin-bottom: 30px;
+      padding: 0 0 5px 30px;
+      border-bottom: solid 1px $color-8;
+
+      .counter {
+        position: absolute;
+        left: 0;
+        top: 0;
+      }
+    }
+  }
+}

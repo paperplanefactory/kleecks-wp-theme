@@ -1,0 +1,168 @@
+// main: ../style.scss
+@import '../global/vars';
+@import '../global/mixin';
+
+.as-h1,
+h1 {
+  font-size: $h1-size-smartphone;
+  line-height: $h1-lineheight-smartphone;
+  margin-bottom: $h1-marginbottom-smartphone;
+}
+
+.as-h2,
+h2 {
+  font-size: $h2-size-smartphone;
+  line-height: $h2-lineheight-smartphone;
+  margin-bottom: $h2-marginbottom-smartphone;
+}
+
+.as-h3,
+h3 {
+  font-size: $h3-size-smartphone;
+  line-height: $h3-lineheight-smartphone;
+  margin-bottom: $h3-marginbottom-smartphone;
+}
+
+.as-h4,
+h4 {
+  font-size: $h4-size-smartphone;
+  line-height: $h4-lineheight-smartphone;
+  margin-bottom: $h4-marginbottom-smartphone;
+}
+
+.as-h5,
+h5 {
+  font-size: $h5-size-smartphone;
+  line-height: $h5-lineheight-smartphone;
+  margin-bottom: $h5-marginbottom-smartphone;
+}
+
+.as-h6,
+h6 {
+  font-size: $h6-size-smartphone;
+  line-height: $h6-lineheight-smartphone;
+  margin-bottom: $h6-marginbottom-smartphone;
+}
+
+p {
+  font-size: $paragraph-size-smartphone;
+  line-height: $paragraph-lineheight-smartphone;
+  margin: 0 0 $paragraph-marginbottom-smartphone;
+  padding: 0;
+}
+
+.cta-1 {
+  font-size: $cta1-size-smartphone;
+  line-height: $cta1-lineheight-smartphone;
+}
+
+.cta-2,
+.mega-menu,
+.menu,
+.navigation {
+  font-size: $cta2-size-smartphone;
+  line-height: $cta2-lineheight-smartphone;
+}
+
+.text-handwritten {
+  font-size: $hadwritten1-size-smartphone;
+  line-height: $hadwritten1-lineheight-smartphone;
+}
+
+.text-extra-1 {
+  font-size: $extra1-size-smartphone;
+  line-height: $extra1-lineheight-smartphone;
+}
+
+.text-extra-2 {
+  font-size: $extra2-size-smartphone;
+  line-height: $extra2-lineheight-smartphone;
+}
+
+.content-styled {
+  h1:not(:first-child) {
+    margin-top: calc(#{$h1-marginbottom-smartphone} * 2);
+  }
+
+  h2:not(:first-child) {
+    margin-top: calc(#{$h2-marginbottom-smartphone} * 2);
+  }
+
+  h3:not(:first-child) {
+    margin-top: calc(#{$h3-marginbottom-smartphone} * 2);
+  }
+
+  h4:not(:first-child) {
+    margin-top: calc(#{$h4-marginbottom-smartphone} * 2);
+  }
+
+  h5:not(:first-child) {
+    margin-top: calc(#{$h5-marginbottom-smartphone} * 2);
+  }
+
+  h6:not(:first-child) {
+    margin-top: calc(#{$h6-marginbottom-smartphone} * 2);
+  }
+
+  ul {
+    font-size: $paragraph-size-smartphone;
+    line-height: $paragraph-lineheight-smartphone;
+    margin-bottom: $paragraph-marginbottom-smartphone;
+
+    li {
+      display: table-row;
+
+      &:before {
+        font-size: 20px;
+        font-weight: $font-weight-1;
+      }
+    }
+  }
+
+  ol {
+    font-size: $paragraph-size-smartphone;
+    line-height: $paragraph-lineheight-smartphone;
+    margin-bottom: $paragraph-marginbottom-smartphone;
+  }
+
+  ol > li {
+    &:before {
+      font-family: $font-main;
+      font-size: $paragraph-size-smartphone;
+    }
+  }
+}
+
+.wp-caption-text,
+.wp-caption.aligncenter .wp-caption-text,
+.wp-caption.alignleft .wp-caption-text,
+.wp-caption.alignnone .wp-caption-text,
+.wp-caption.alignright .wp-caption-text {
+  padding: 5px 0 0;
+  font-size: $cta1-size-smartphone;
+  line-height: $cta1-lineheight-smartphone;
+  word-wrap: break-word;
+  font-style: italic;
+}
+
+.expander {
+  font-family: $font-main;
+  font-weight: $font-weight-1;
+  font-size: $h4-size-smartphone;
+  line-height: $h4-lineheight-smartphone;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ol,
+p,
+ul {
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;
+}

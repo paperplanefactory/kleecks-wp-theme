@@ -1,0 +1,47 @@
+// main: ../style.scss
+@import '../global/vars';
+@import '../global/mixin';
+
+.module-jobs-listing {
+  .module-paddings-top {
+    padding-top: $module-vertical-padding-desktop;
+  }
+
+  .module-paddings-top-double {
+    padding-top: calc(#{$module-vertical-padding-desktop} * 2);
+  }
+
+  .module-no-paddings-top {
+    padding-top: 0;
+  }
+
+  .module-paddings-bottom {
+    padding-bottom: $module-vertical-padding-desktop;
+  }
+
+  .module-paddings-bottom-double {
+    padding-bottom: calc(#{$module-vertical-padding-desktop} * 2);
+  }
+
+  .module-no-paddings-bottom {
+    padding-bottom: 0;
+  }
+
+  .job-listed {
+    border: solid 1px $color-6;
+    padding: 33px 25px;
+    margin-bottom: 20px;
+
+    h5 {
+      margin-bottom: 5px;
+    }
+
+    p {
+      margin-bottom: 15px;
+    }
+  }
+
+  .cta-holder {
+    margin: 0;
+  }
+}

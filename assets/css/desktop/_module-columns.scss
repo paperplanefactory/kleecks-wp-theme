@@ -1,0 +1,79 @@
+// main: ../style.scss
+@import '../global/vars';
+@import '../global/mixin';
+
+.module-columns {
+  .module-paddings-top {
+    padding-top: $module-vertical-padding-desktop;
+  }
+
+  .module-paddings-top-double {
+    padding-top: calc(#{$module-vertical-padding-desktop} * 2);
+  }
+
+  .module-no-paddings-top {
+    padding-top: 0;
+  }
+
+  .module-paddings-bottom {
+    padding-bottom: $module-vertical-padding-desktop;
+  }
+
+  .module-paddings-bottom-double {
+    padding-bottom: calc(#{$module-vertical-padding-desktop} * 2);
+  }
+
+  .module-no-paddings-bottom {
+    padding-bottom: 0;
+  }
+
+  .cta-holder {
+    text-align: center;
+    margin: 64px 0 0;
+  }
+
+  .module-column-box {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      margin-top: 0;
+      margin-bottom: 10px;
+    }
+
+    .column-image {
+      position: relative;
+      display: inline-block;
+      width: 100%;
+      margin-bottom: 24px;
+
+      .image-rounder {
+        width: 250px;
+      }
+
+      .image-icon {
+        display: inline-block;
+        width: 60px;
+      }
+    }
+
+    .counter {
+      h2,
+      h3 {
+        display: inline-block;
+        margin-bottom: 10px;
+      }
+    }
+
+    .cta-holder {
+      text-align: inherit;
+      margin: 24px 0 0;
+    }
+
+    .inline-socials {
+      margin: 24px 0 0;
+    }
+  }
+}

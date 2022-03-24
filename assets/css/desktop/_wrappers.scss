@@ -1,0 +1,79 @@
+// main: ../style.scss
+@import '../global/vars';
+@import '../global/mixin'; // wrappers and more
+
+.wrapper-padded {
+  width: 100%;
+  padding: 0 $wrapper-padded-desktop;
+}
+
+.wrapper-padded-slideshow {
+  width: 100%;
+  padding: 0 $wrapper-padded-desktop;
+  overflow: visible;
+}
+
+.wrapper-padded-container {
+  max-width: 1680px;
+}
+
+.wrapper-padded-more-1230 {
+  max-width: 1230px;
+}
+
+.wrapper-padded-more-924 {
+  max-width: 924px;
+}
+
+.wrapper-padded-more-810 {
+  max-width: 810px;
+}
+
+.wrapper-padded-more-600 {
+  max-width: 600px;
+}
+
+.sticky-element {
+  position: -webkit-sticky;
+  position: -moz-sticky;
+  position: -ms-sticky;
+  position: -o-sticky;
+  position: sticky;
+  top: calc(#{$header-desktop-height} + 35px);
+}
+
+::-webkit-scrollbar,
+::-webkit-scrollbar-thumb,
+::-webkit-scrollbar-track {
+  width: 12px;
+  border: none;
+  background: transparent;
+  -webkit-appearance: none !important;
+}
+
+::-webkit-resizer,
+::-webkit-scrollbar-button,
+::-webkit-scrollbar-corner,
+::-webkit-scrollbar-track-piece {
+  display: none;
+}
+
+::-webkit-scrollbar-thumb {
+  width: 12px;
+  background-color: $color-1;
+}
+
+::-webkit-scrollbar-track {
+  //-webkit-appearance: none !important;
+  //display: none !important;
+  opacity: 0 !important;
+  //visibility: hidden !important;
+  //width: 0 !important;
+  //background-color: $color-1;
+  background-color: transparent;
+}
+
+:root {
+  scrollbar-color: $color-1 $color-4 !important;
+  scrollbar-width: auto !important;
+}

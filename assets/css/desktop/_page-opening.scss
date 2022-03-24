@@ -1,0 +1,156 @@
+// main: ../style.scss
+@import '../global/vars';
+@import '../global/mixin';
+
+.page-opening-fullscreen,
+.page-opening-fullscreen-less {
+  position: relative;
+  display: block;
+  width: 100%;
+  overflow: hidden;
+}
+
+.page-opening-fullscreen {
+  min-height: calc(100vh - #{$header-desktop-height});
+}
+
+.fullscreen-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  overflow: hidden;
+
+  video {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.fullscreen-cta {
+  @include flex-wrap;
+
+  .cta-holder {
+    margin: 32px 0 0;
+  }
+}
+
+.fullscreen-cta-center {
+  padding: 0;
+  margin: 0;
+  @include flex-verticalize;
+
+  .fullscreen-cta-aligner {
+    width: 100%;
+
+    .fullscreen-cta-safe-padding {
+      padding: 15vh 0;
+    }
+  }
+}
+
+.fullscreen-cta-bottom {
+  padding: 0;
+  margin: 0;
+
+  .fullscreen-cta-aligner {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+
+    .fullscreen-cta-safe-padding {
+      padding: 5vh 0;
+    }
+  }
+}
+
+.fullscreen-cta-safe-padding,
+.page-opening-simple-spacer {
+  .last-child-no-margin {
+    max-width: 700px;
+  }
+
+  &.alignright {
+    .last-child-no-margin {
+      float: right;
+    }
+  }
+
+  &.aligncenter {
+    .last-child-no-margin {
+      margin: 0 auto;
+    }
+  }
+}
+
+.page-opening-simple-spacer {
+  padding: calc(#{$header-desktop-height} + 72px) 0 48px;
+
+  .cta-holder {
+    margin: 35px 0 0;
+  }
+}
+
+.breadcrumbs-holder {
+  margin-bottom: 15px;
+}
+
+.categories-holder {
+  margin: 32px 0 0;
+
+  a {
+    margin: 0 16px;
+
+    &:first-child {
+      margin-left: 0;
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
+
+.opening-kleecks {
+  min-height: calc(100vh - #{$header-desktop-height});
+  background-image: url("assets/images/opening-k.svg");
+  background-position: right 50%;
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+  background-attachment: fixed;
+
+  .flex-hold {
+    min-height: calc(100vh - #{$header-desktop-height});
+
+    .texts-area {
+      position: relative;
+      max-width: 700px;
+      padding: 7vh 20px 7vh 0;
+
+      h5 {
+        font-weight: $font-weight-1;
+        color: $color-1;
+        margin-bottom: 0;
+      }
+
+      .cta-holder {
+        margin-top: 40px;
+      }
+
+      .logos-slideshow-box {
+        width: 100%;
+        margin-top: 5vh;
+      }
+    }
+  }
+
+  .after-title-arrows-area-bottom {
+    display: block;
+    width: 100%;
+    height: 80px;
+  }
+}

@@ -1,0 +1,90 @@
+// main: ../style.scss
+@import '../global/vars';
+@import '../global/mixin';
+
+.module-stripe {
+  .wrapper-padded {
+    overflow-y: hidden;
+  }
+
+  .module-paddings-top {
+    padding-top: $module-vertical-padding-desktop;
+  }
+
+  .module-paddings-top-double {
+    padding-top: calc(#{$module-vertical-padding-desktop} * 2);
+  }
+
+  .module-no-paddings-top {
+    padding-top: 0;
+  }
+
+  .module-paddings-bottom {
+    padding-bottom: $module-vertical-padding-desktop;
+  }
+
+  .module-paddings-bottom-double {
+    padding-bottom: calc(#{$module-vertical-padding-desktop} * 2);
+  }
+
+  .module-no-paddings-bottom {
+    padding-bottom: 0;
+  }
+
+  .stripe-listed {
+    margin-bottom: $flex-hold-column-wide-space-desktop;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    &.stripe-image-text {
+      .module-stripe-image {
+        order: 1;
+
+        .spacer {
+          padding-right: $flex-hold-column-thin-space-desktop;
+        }
+      }
+
+      .module-stripe-text {
+        order: 2;
+
+        .spacer {
+          padding: 20px $flex-hold-column-thin-space-desktop 20px $flex-hold-column-wide-space-desktop;
+          max-width: 580px;
+        }
+      }
+    }
+
+    &.stripe-text-image {
+      .module-stripe-image {
+        order: 2;
+
+        .spacer {
+          padding-left: $flex-hold-column-thin-space-desktop;
+        }
+      }
+
+      .module-stripe-text {
+        order: 1;
+
+        .spacer {
+          padding: 20px $flex-hold-column-wide-space-desktop 20px 0;
+          max-width: 580px;
+          margin-right: auto;
+        }
+      }
+    }
+
+    .cta-holder {
+      text-align: inherit;
+      margin: 32px 0 0;
+    }
+  }
+
+  .cta-holder {
+    text-align: center;
+    margin: $module-vertical-padding-desktop 0 0;
+  }
+}

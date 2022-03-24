@@ -1,0 +1,165 @@
+// main: ../style.scss
+@import 'vars';
+@import 'mixin';
+
+#footer p,
+.as-h1,
+.cta-1,
+.cta-2,
+.mega-menu,
+.mega-menu p,
+.menu,
+figcaption,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  font-family: $font-main;
+}
+
+.text-handwritten {
+  font-family: $font-sub;
+}
+
+p {
+  font-weight: $font-weight-1;
+}
+
+.menu,
+.navigation {
+  font-weight: $font-weight-2;
+}
+
+h1,
+h2,
+h4 {
+  font-weight: $font-weight-3;
+}
+
+.cta,
+.text-data,
+.text-extra-1,
+.text-handwritten,
+h3,
+h6 {
+  font-weight: $font-weight-4;
+}
+
+.text-extra-2,
+h5 {
+  font-weight: $font-weight-5;
+}
+
+.aligncenter {
+  text-align: center;
+}
+
+.alignright {
+  text-align: right;
+}
+
+.alignleft {
+  text-align: left;
+}
+
+.allupper {
+  text-transform: uppercase;
+}
+// comma separated links
+
+.category-list {
+  //margin-bottom: 24px;
+  a:link {
+    &:after {
+      content: ", ";
+    }
+
+    &:last-child:after {
+      content: "";
+    }
+  }
+
+  span {
+    &:after {
+      content: ", ";
+    }
+
+    &:last-child:after {
+      content: "";
+    }
+  }
+}
+// remove typography elements last child margin bottom
+
+.last-child-no-margin {
+  h1:last-child,
+  h2:last-child,
+  h3:last-child,
+  h4:last-child,
+  h5:last-child,
+  h6:last-child,
+  ol:last-child,
+  p:last-child,
+  ul:last-child {
+    margin-bottom: 0 !important;
+  }
+}
+
+.content-styled {
+  strong {
+    font-weight: $font-weight-3;
+  }
+
+  ol,
+  ul {
+    font-weight: $font-weight-1;
+    font-family: $font-sub;
+  }
+
+  ul {
+    list-style-position: inside;
+    list-style: none;
+    padding: 0;
+
+    li {
+      display: table-row;
+
+      &:before {
+        position: relative;
+        display: table-cell;
+        content: '●';
+        padding: 0 10px 0 0;
+      }
+    }
+  }
+
+  ol {
+    list-style-type: none;
+    list-style-type: decimal;
+    padding: 0;
+    counter-reset: li-counter;
+  }
+
+  ol > li {
+    overflow: hidden;
+    position: relative;
+    margin: 0;
+    padding: 0 0 0 20px;
+    display: table-row;
+
+    &:before {
+      position: relative;
+      display: table-cell;
+      top: 0;
+      left: 0;
+      font-weight: $font-weight-3;
+      text-align: right;
+      content: counter(li-counter)". ";
+      counter-increment: li-counter;
+      padding: 0 15px 0 0;
+    }
+  }
+}
