@@ -2,6 +2,11 @@
 @import '../global/vars';
 @import '../global/mixin'; // wrappers and more
 
+.desktop-only,
+.editor-info {
+  display: none;
+}
+
 .header-offset-anchor {
   position: absolute;
   display: block;
@@ -69,11 +74,11 @@
   li {
     text-align: center !important;
     display: inline-block;
-    width: 28px;
-    height: 28px;
-    margin: 0 0 10px 15px;
+    width: 32px;
+    height: 32px;
+    margin: 0 20px 0 0;
     overflow: hidden;
-    font-size: 28px;
+    font-size: 32px;
   }
 }
 

@@ -89,7 +89,7 @@ $hamburger-width: 180px; // header
             }
 
             &.current-mega-menu {
-              font-weight: $font-weight-4;
+              text-shadow: 0 0 1px $color-5;
 
               &:before {
                 top: 0;

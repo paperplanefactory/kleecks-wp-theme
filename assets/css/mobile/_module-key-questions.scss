@@ -2,7 +2,7 @@
 @import '../global/vars';
 @import '../global/mixin';
 
-.module-columns-fix-column {
+.module-key-questions {
   .module-paddings-top {
     padding-top: $module-vertical-padding-smartphone;
   }
@@ -27,49 +27,41 @@
     padding-bottom: 0;
   }
 
-  .cta-holder {
-    text-align: center;
-    margin: 64px 0 0;
+  .flex-hold-key-questions {
+    .key-questions {
+      order: 2;
+      width: 100%;
+      padding: 40px 24px;
+    }
+
+    .key-questions-intro {
+      order: 1;
+      width: 100%;
+      margin-bottom: 34px;
+    }
   }
 
-  .module-column-box {
-    margin-bottom: 23px !important;
+  .key-questions-list {
+    font-size: $paragraph-size-smartphone;
+    line-height: $paragraph-lineheight-smartphone;
+    font-weight: $font-weight-3;
 
-    .column-image {
+    li {
       position: relative;
-      display: inline-block;
-      width: 100%;
+      margin-bottom: 30px;
+      padding: 0 0 10px 30px;
+      border-bottom: solid 1px $color-8;
 
-      .image-rounder {
-        max-width: 250px;
+      &:last-child {
+        border-bottom: none;
+        margin-bottom: 0;
       }
 
-      .image-icon {
+      .counter {
         position: absolute;
         left: 0;
         top: 0;
-        display: inline-block;
-        width: 48px;
       }
-    }
-
-    .content-styled {
-      color: $color-8;
-    }
-
-    .iconized {
-      padding-left: 70px;
-    }
-
-    .cta-holder {
-      text-align: inherit;
-      margin: 24px 0 0;
-    }
-  }
-
-  .flex-hold-2 {
-    .flex-hold-child {
-      margin-bottom: $flex-hold-column-wide-space-desktop;
     }
   }
 }

@@ -88,7 +88,7 @@
 }
 
 .page-opening-simple-spacer {
-  padding: calc(#{$header-desktop-height} + 72px) 0 48px;
+  padding: 97px 0 80px;
 
   .cta-holder {
     margin: 35px 0 0;
@@ -111,6 +111,34 @@
 
     &:last-child {
       margin-right: 0;
+    }
+  }
+}
+
+.page-opening-text {
+  p {
+    font-weight: $font-weight-4;
+  }
+
+  .page-opening-list {
+    color: $color-1;
+    margin-top: 25px;
+
+    li {
+      position: relative;
+      padding: 12px 0 0 70px;
+      font-size: $paragraph-size-desktop;
+      line-height: $paragraph-lineheight-desktop;
+      margin-bottom: 25px;
+      min-height: 46px;
+      background-image: url("assets/images/kleecks-checklist-item.svg");
+      background-position: 0 0;
+      background-repeat: no-repeat;
+      background-size: 54px 46px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
     }
   }
 }

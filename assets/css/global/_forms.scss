@@ -132,6 +132,11 @@
 		font-weight: $font-weight-1;
 	}
 
+	.wpcf7-list-item {
+		display: block;
+		width: 100%;
+	}
+
 	.wpcf7-form-control-wrap {
 		.wpcf7-list-item {
 			margin: 0 !important;

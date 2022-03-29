@@ -23,7 +23,7 @@ if ( !empty ( $my_jobs ) ) : ?>
             <?php endif; ?>
             <?php if ( get_field( 'link' ) ) : ?>
               <div class="cta-holder">
-                <a href="<?php the_field( 'link' ); ?>" class="default-button-b allupper" target="_blank">Read more</a>
+                <a href="<?php the_field( 'link' ); ?>" class="default-button-b allupper" target="_blank" title="<?php the_title(); ?>">Read more</a>
               </div>
             <?php endif; ?>
           </div>

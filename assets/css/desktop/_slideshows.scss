@@ -123,55 +123,6 @@
   right: 32px;
 }
 
-.slick-dots {
-  text-align: center;
-  padding: 10px 0 0 0 !important;
-
-  li {
-    position: relative;
-    display: inline-block;
-    margin: 0 5px;
-    width: 24px;
-    height: 24px;
-    @include define-basic-transition(all, 0.3s);
-    @include define-border-radius(24px);
-    border: solid 1px $color-8;
-    background-color: $color-4;
-    overflow: hidden;
-
-    &:before {
-      content: "";
-      position: absolute;
-      left: 5px;
-      top: 5px;
-      width: 12px;
-      height: 12px;
-      background-color: $color-5;
-      @include define-basic-transition(all, 0.3s);
-      @include define-border-radius(12px);
-      opacity: 0;
-      pointer-events: none;
-    }
-
-    &.slick-active {
-      &:before {
-        opacity: 1;
-      }
-    }
-
-    button {
-      width: 24px;
-      height: 24px;
-      border: none;
-      font-size: 0;
-      margin: 0;
-      padding: 0;
-      cursor: pointer;
-      background-color: transparent;
-    }
-  }
-}
-
 .paging-info {
   position: relative;
   display: block;

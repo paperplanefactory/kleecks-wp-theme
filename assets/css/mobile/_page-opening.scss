@@ -151,3 +151,74 @@
     }
   }
 }
+
+.page-opening-text {
+  p {
+    font-weight: $font-weight-4;
+  }
+
+  .page-opening-list {
+    color: $color-1;
+    margin-top: 25px;
+
+    li {
+      position: relative;
+      padding: 12px 0 0 70px;
+      font-size: $paragraph-size-smartphone;
+      line-height: $paragraph-lineheight-smartphone;
+      margin-bottom: 25px;
+      min-height: 46px;
+      background-image: url("assets/images/kleecks-checklist-item.svg");
+      background-position: 0 0;
+      background-repeat: no-repeat;
+      background-size: 54px 46px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
+.opening-kleecks {
+  min-height: calc(100vh - #{$header-desktop-height});
+
+  .flex-hold {
+    //min-height: calc(100vh - #{$header-desktop-height});
+    .texts-area {
+      position: relative;
+      padding: 3.5vh 20px 0 0;
+
+      h5 {
+        font-weight: $font-weight-1;
+        color: $color-1;
+        margin-bottom: 0;
+      }
+
+      .cta-holder {
+        margin-top: 40px;
+      }
+
+      .logos-slideshow-box {
+        width: 100%;
+        margin-top: 5vh;
+      }
+    }
+  }
+
+  .mobile-image {
+    position: relative;
+    left: -$wrapper-padded-smartphone;
+    width: 100vw;
+    background-image: url("assets/images/opening-k.svg");
+    background-position: right 50%;
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+    margin: 0 0 0 0 !important;
+    padding: 3.5vh 0;
+  }
+
+  .after-title-arrows-area-bottom {
+    display: none;
+  }
+}

@@ -129,27 +129,25 @@ $static_bloginfo_stylesheet_directory = get_bloginfo('stylesheet_directory');
   </header>
   <?php include( locate_template( 'template-parts/grid/mega-menu.php' ) ); ?>
 
-  <div id="head-overlay" class="hidden colors-black-bg">
+  <div id="head-overlay" class="hidden txt-4">
     <div class="scroll-opportunity">
       <div class="wrapper">
-        <nav class="menu">
-          <?php
-          if ( has_nav_menu( 'overlay-menu-mobile' ) ) {
-            wp_nav_menu( array( 'theme_location' => 'overlay-menu-mobile', 'container' => 'ul', 'menu_class' => 'overlay-menu-mobile-css overlay-menu-mobile-js' ) );
-          }
-          ?>
-        </nav>
+        <div class="wrapper-padded">
+          <nav class="menu">
+            <?php
+            if ( has_nav_menu( 'overlay-menu-mobile' ) ) {
+              wp_nav_menu( array( 'theme_location' => 'overlay-menu-mobile', 'container' => 'ul', 'menu_class' => 'overlay-menu-mobile-css overlay-menu-mobile-js' ) );
+            }
+            ?>
+          </nav>
 
-        <?php if ( have_rows( 'global_socials', 'option' ) ) : ?>
-          <ul class="inline-socials">
-            <?php while ( have_rows( 'global_socials', 'option' ) ) : the_row(); ?>
-              <li>
-                <a href="<?php the_sub_field( 'global_socials_profile_url' ); ?>" class="icon <?php the_sub_field( 'global_socials_icon' ); ?>" target="_blank" aria-label="Visit <?php the_sub_field( 'global_socials_profile_url' ); ?>" rel="noopener">
-                </a>
-              </li>
-            <?php endwhile; ?>
-          </ul>
-        <?php endif; ?>
+          <div class="mobile-book">
+            <div class="cta-holder">
+              <a href="<?php echo $link_book_demo['url'];?>" target="<?php echo $link_book_demo['target'];?>" class="default-button default-button-yellow allupper"><?php echo $link_book_demo['title'];?></a>
+            </div>
+          </div>
+        </div>
+
       </div>
     </div>
   </div>

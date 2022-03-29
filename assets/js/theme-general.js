@@ -109,6 +109,7 @@ function hamburgerMenu(e) {
     jQuery('.scroll-opportunity').scrollTop(0);
   }
   jQuery('#head-overlay').toggleClass('hidden');
+  jQuery('#header').toggleClass('overlayed');
   jQuery('.mega-menu-js').addClass('hidden');
   jQuery('.mega-menu-js-trigger').removeClass('current-mega-menu');
 }
@@ -148,12 +149,32 @@ if (jQuery('.mega-menu-js')[0]) {
   });
 
 
-  jQuery('.mega-menu-js-trigger').hover(function(e) {
-    jQuery('.mega-menu-js').addClass('hidden');
-    jQuery('.mega-menu-js-trigger').removeClass('current-mega-menu');
+  jQuery('.mega-menu-js-trigger').click(function(e) {
+    //jQuery('.mega-menu-js').addClass('hidden');
+    //jQuery('.mega-menu-js-trigger').removeClass('current-mega-menu');
     var megamenu_open_id = jQuery(this).data('megamenu-open-id');
-    jQuery(this).addClass('current-mega-menu');
-    jQuery(megamenu_open_id).removeClass('hidden');
+
+    if (jQuery(this).hasClass('current-mega-menu')) {
+      jQuery(this).removeClass('current-mega-menu');
+      jQuery(megamenu_open_id).addClass('hidden');
+
+      //alert('has');
+    } else {
+      jQuery('.mega-menu-js').addClass('hidden');
+      jQuery('.mega-menu-js-trigger').removeClass('current-mega-menu');
+      jQuery(this).addClass('current-mega-menu');
+      jQuery(megamenu_open_id).removeClass('hidden');
+
+
+      //alert('has not');
+    }
+    //jQuery('.mega-menu-js').addClass('hidden');
+    //jQuery('.mega-menu-js-trigger').removeClass('current-mega-menu');
+
+    e.preventDefault();
+  });
+
+  jQuery('.mega-menu-js-trigger').click(function(e) {
     e.preventDefault();
   });
 
@@ -169,17 +190,17 @@ if (jQuery('.mega-menu-js')[0]) {
 /////////////////////////////////////////////
 
 jQuery('.overlay-menu-mobile-js > .menu-item-has-children > a').each(function(i, el) {
-  jQuery(this).append('<span>▼</span>');
+  jQuery(this).append('<span class="menu-icon-toggle menu-icon-closed"></span>');
 });
 
-jQuery('.overlay-menu-mobile-js > .menu-item-has-children > a > span').click(function(e) {
+jQuery('.overlay-menu-mobile-js > .menu-item-has-children > a').click(function(e) {
   //alert('sdfsdf');
-  if (jQuery(this).text() == "▼") {
-    jQuery(this).text("▲");
+  if (jQuery(this).find('span').hasClass('menu-icon-closed')) {
+    jQuery(this).find('span').removeClass('menu-icon-closed').addClass('menu-icon-open');
   } else {
-    jQuery(this).text("▼");
+    jQuery(this).find('span').removeClass('menu-icon-open').addClass('menu-icon-closed');
   }
-  jQuery(this).parent().parent().find('.sub-menu').slideToggle(150);
+  jQuery(this).parent().find('.sub-menu').slideToggle(150);
   e.preventDefault();
 });
 
@@ -187,7 +208,7 @@ jQuery('.overlay-menu-mobile-js > .menu-item-has-children > a > span').click(fun
 // slick slideshow
 /////////////////////////////////////////////
 
-jQuery('.slide-double-js, .slide-single-js, .logos-slideshow-extended-js, .logos-slideshow-compact-js, .feature-image-slider-js, .slide-case-study-js, .slide-comunicato-stampa-js, .slide-foto-js').on('init reInit', function(event, slick, currentSlide, nextSlide) {
+jQuery('.features-mobile-slider-js, .slide-double-js, .slide-single-js, .logos-slideshow-extended-js, .logos-slideshow-compact-js, .feature-image-slider-js, .slide-case-study-js, .slide-comunicato-stampa-js, .slide-foto-js').on('init reInit', function(event, slick, currentSlide, nextSlide) {
   AOS.refresh();
 });
 jQuery('.logos-slideshow-compact-js').slick({
@@ -206,8 +227,8 @@ jQuery('.logos-slideshow-compact-js').slick({
   responsive: [{
     breakpoint: 1024,
     settings: {
-      slidesToShow: 1,
-      slidesToScroll: 1
+      slidesToShow: 2,
+      slidesToScroll: 2
     }
   }]
 });
@@ -228,8 +249,8 @@ jQuery('.logos-slideshow-extended-js').slick({
   responsive: [{
     breakpoint: 1024,
     settings: {
-      slidesToShow: 1,
-      slidesToScroll: 1
+      slidesToShow: 2,
+      slidesToScroll: 2
     }
   }]
 });
@@ -249,6 +270,20 @@ jQuery('.feature-image-slider-js').slick({
   slidesToScroll: 1,
   arrows: false,
 });
+jQuery('.features-mobile-slider-js').slick({
+  lazyLoad: 'progressive',
+  dots: false,
+  focusOnSelect: true,
+  draggable: true,
+  infinite: true,
+  variableWidth: true,
+  accessibility: true,
+  adaptiveHeight: false,
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  arrows: false,
+});
+
 
 
 jQuery('.slide-case-study-js, .slide-comunicato-stampa-js, .slide-foto-js').slick({
@@ -266,6 +301,7 @@ jQuery('.slide-case-study-js, .slide-comunicato-stampa-js, .slide-foto-js').slic
   responsive: [{
     breakpoint: 1024,
     settings: {
+      variableWidth: false,
       slidesToShow: 1,
       slidesToScroll: 1
     }
@@ -339,11 +375,11 @@ numbers_counter();
 jQuery('.expander').click(function(e) {
   if (jQuery(this).hasClass('exp-close')) {
     jQuery(this).addClass('exp-open').removeClass('exp-close').attr('aria-expanded', false).focus();
-    jQuery(this).find('span').addClass('exp-plus').removeClass('exp-minus');
+    jQuery(this).find('.exp-arrow').addClass('exp-plus').removeClass('exp-minus');
     jQuery(this).parent().next('.expandable-content').slideUp(150);
   } else {
     jQuery(this).addClass('exp-close').removeClass('exp-open').attr('aria-expanded', true);
-    jQuery(this).find('span').removeClass('exp-plus').addClass('exp-minus');
+    jQuery(this).find('.exp-arrow').removeClass('exp-plus').addClass('exp-minus');
     jQuery(this).parent().next('.expandable-content').slideDown(150).focus();
   }
   e.preventDefault();
@@ -359,7 +395,6 @@ jQuery('.feature-activator-js').click(function(e) {
   jQuery('.activator-status').text("+");
   var feature_number = jQuery(this).data('feature-number');
   var feature_number_slider = feature_number - 1;
-  console.log(feature_number_slider);
   jQuery(this).parent('.feature-block-js').addClass('active-feature');
   jQuery(this).next('.feature-text-js').slideDown(300);
   jQuery('.feature-image-slider-js').slick('slickGoTo', feature_number_slider);
@@ -372,7 +407,25 @@ jQuery('.feature-activator-js').click(function(e) {
   e.preventDefault();
 });
 
+/////////////////////////////////////////////
+// features mobile
+/////////////////////////////////////////////
 
+jQuery('.feature-activator-mobile-js').click(function(e) {
+  //jQuery('.feature-text').slideUp(300);
+  //jQuery('.feature-texts').removeClass('active-feature');
+  var feature_number = jQuery(this).data('feature-mobile-number');
+  jQuery('.feature-texts-js-' + feature_number).toggleClass('active');
+  jQuery('.feature-content-js-' + feature_number).slideToggle(300);
+  var isVisible = jQuery('.feature-texts-js-' + feature_number).hasClass('active');
+  if (isVisible) {
+    jQuery('.activator-status-js-' + feature_number).text("-");
+  } else {
+    jQuery('.activator-status-js-' + feature_number).text("+");
+  }
+
+  e.preventDefault();
+});
 
 /////////////////////////////////////////////
 // Modals

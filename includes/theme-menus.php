@@ -3,14 +3,12 @@
 function register_theme_menus() {
   register_nav_menus(
     array(
-      'header-menu' => __( 'Header Menu' ),
-      'footer-menu-1' => __( 'Footer Menu colonna 1' ),
-      'footer-menu-2' => __( 'Footer Menu colonna 2' ),
-      'footer-menu-3' => __( 'Footer Menu colonna 3' ),
-      'footer-menu-4' => __( 'Footer Menu colonna 4' ),
-      'footer-menu-5' => __( 'Footer Menu colonna 5' ),
-      'footer-menu-6' => __( 'Footer Menu colonna 6' ),
-      'overlay-menu-desktop' => __ ( 'Overlay Menu Desktop' ),
+      'header-menu' => __( 'Header Menu Desktop' ),
+      'footer-menu-1' => __( 'Footer Menu Desktop colonna 1' ),
+      'footer-menu-2' => __( 'Footer Menu Desktop colonna 2' ),
+      'footer-menu-3' => __( 'Footer Menu Desktop colonna 3' ),
+      'footer-menu-4' => __( 'Footer Menu Desktop colonna 4' ),
+      'footer-menu-1-mobile' => __( 'Footer Menu Mobile colonna 1' ),
       'overlay-menu-mobile' => __ ( 'Overlay Menu Mobile' )
     )
   );

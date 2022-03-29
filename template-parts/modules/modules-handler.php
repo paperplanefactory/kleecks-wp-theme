@@ -9,12 +9,15 @@
   $show_hide_module = get_sub_field( 'show_hide_module');
   // mostro o nascondo il modulo
   if ( $show_hide_module == 1 ) {
-    $bar = get_user_option( 'show_admin_bar_front', get_current_user_id() );
+    //$bar = get_user_option( 'show_admin_bar_front', get_current_user_id() );
+    $bar = true;
     // mostro o nascondo l'indice del modulo
     if (  $bar == 'true' ) {
-      echo '<div class="editor-info editor-info-js"><div class="admin-index"><span class="click-hide">+</span><span class="hide-me hidden-label"> Modulo: '. $module_count .' URL: '. get_permalink() .'#section-'. $module_count .'</span></div></div>';
+      if ( is_user_logged_in() ) {
+        echo '<div class="editor-info editor-info-js"><div class="admin-index"><span class="click-hide">+</span><span class="hide-me hidden-label"> Modulo: '. $module_count .' URL: '. get_permalink() .'#section-'. $module_count .'</span></div></div>';
+      }
     }
-    //echo '<a name="section-'.$module_count.'" class="header-offset-anchor"></a>';
+    echo '<a name="section-'.$module_count.'" class="header-offset-anchor"></a>';
     switch ( $choose_module ) {
       // module-text
       case 'module-text' :
@@ -68,6 +71,14 @@
       case 'module-kleecks' :
       include( locate_template( 'template-parts/modules/module-kleecks.php' ) );
       break;
+      // module-expanding-text
+      case 'module-expanding-text' :
+      include( locate_template( 'template-parts/modules/module-expanding-text.php' ) );
+      break;
+      // module-cf7
+      case 'module-cf7' :
+      include( locate_template( 'template-parts/modules/module-cf7.php' ) );
+      break;
       // module-highlighted-sentence
       // case 'module-highlighted-sentence' :
       // include( locate_template( 'template-parts/modules/module-highlighted-sentence.php' ) );
@@ -76,10 +87,7 @@
       // case 'module-fullscreen-image' :
       // include( locate_template( 'template-parts/modules/module-fullscreen-image.php' ) );
       // break;
-      // module-expanding-text
-      // case 'module-expanding-text' :
-      // include( locate_template( 'template-parts/modules/module-expanding-text.php' ) );
-      // break;
+
     }
   }
 

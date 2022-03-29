@@ -1,0 +1,41 @@
+// main: ../style.scss
+@import '../global/vars';
+@import '../global/mixin';
+
+.module-cf7 {
+  .module-paddings-top {
+    padding-top: $module-vertical-padding-desktop;
+  }
+
+  .module-paddings-top-double {
+    padding-top: calc(#{$module-vertical-padding-desktop} * 2);
+  }
+
+  .module-no-paddings-top {
+    padding-top: 0;
+  }
+
+  .module-paddings-bottom {
+    padding-bottom: $module-vertical-padding-desktop;
+  }
+
+  .module-paddings-bottom-double {
+    padding-bottom: calc(#{$module-vertical-padding-desktop} * 2);
+  }
+
+  .module-no-paddings-bottom {
+    padding-bottom: 0;
+  }
+
+  .form-block {
+    display: block;
+    width: 100%;
+    background-color: $color-4;
+    border: solid 1px $color-2;
+    padding: 60px 5vw;
+
+    .content-styled {
+      margin-bottom: 22px;
+    }
+  }
+}

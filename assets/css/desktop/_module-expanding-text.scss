@@ -27,9 +27,18 @@
     padding-bottom: 0;
   }
 
+  .expanding-topic {
+    margin-bottom: $module-vertical-padding-desktop;
+
+    h2 {
+      margin-bottom: 34px;
+    }
+  }
+
   .expanding-block {
-    margin-bottom: 48px;
-    padding-bottom: 24px;
+    margin-bottom: 30px;
+    padding-bottom: 10px;
+    border-bottom: solid 1px $color-8;
 
     &:last-child {
       margin-bottom: 0;
@@ -39,40 +48,59 @@
 
   .expander {
     position: relative;
+    width: 100%;
     line-height: 17px !important;
     font-weight: $font-weight-2 !important;
-    padding-left: 25px !important;
+    padding: 0 40px 0 30px !important;
     text-align: left;
     @include reset-button;
+    color: $color-8;
 
-    .exp-minus,
-    .exp-plus {
+    .faq-counter {
       position: absolute;
+      top: 0;
       left: 0;
-      font-weight: $font-weight-4;
     }
 
-    .exp-plus {
-      &:before {
-        content: "+";
+    .exp-arrow {
+      position: absolute;
+      top: 0;
+      right: 0;
+      font-family: "kleecks-icons" !important;
+      content: attr(data-icon);
+      font-style: normal !important;
+      font-weight: normal !important;
+      font-variant: normal !important;
+      text-transform: none !important;
+      speak: none;
+      line-height: 1;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      @include define-basic-transition(all, 0.3s);
+
+      &.exp-plus {
+        color: $color-5;
+        @include define-rotate(90);
+
+        &:before {
+          content: "\62";
+        }
       }
-    }
 
-    .exp-minus {
-      &:before {
-        content: '–';
+      &.exp-minus {
+        color: $color-6;
+        @include define-rotate(-90);
+
+        &:before {
+          content: "\62";
+        }
       }
     }
   }
 
   .expandable-content {
     .inner {
-      padding-top: 15px;
-      padding-left: 25px;
+      padding: 15px 20px 15px 30px;
     }
-  }
-
-  .cta-holder {
-    margin: 32px 0 0;
   }
 }

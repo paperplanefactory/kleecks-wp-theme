@@ -1,0 +1,116 @@
+// main: ../style.scss
+@import '../global/vars';
+@import '../global/mixin';
+
+.module-features {
+  .module-paddings-top {
+    padding-top: $module-vertical-padding-smartphone;
+  }
+
+  .module-paddings-top-double {
+    padding-top: calc(#{$module-vertical-padding-smartphone} * 2);
+  }
+
+  .module-no-paddings-top {
+    padding-top: 0;
+  }
+
+  .module-paddings-bottom {
+    padding-bottom: $module-vertical-padding-smartphone;
+  }
+
+  .module-paddings-bottom-double {
+    padding-bottom: calc(#{$module-vertical-padding-smartphone} * 2);
+  }
+
+  .module-no-paddings-bottom {
+    padding-bottom: 0;
+  }
+
+  .features-mobile-slider {
+    .slick-list {
+      overflow: visible;
+    }
+
+    .slick-slide {
+      width: 83vw;
+      opacity: 0.35;
+      @include define-basic-transition(all, 0.3s);
+      margin-right: $wrapper-padded-smartphone;
+
+      &.slick-active {
+        opacity: 1;
+        @include define-basic-transition(all, 0.3s);
+      }
+    }
+
+    .feature-slide {
+      position: relative;
+
+      .activator {
+        position: absolute;
+        z-index: 5;
+        top: 0;
+        left: 0;
+        display: block;
+        width: 100%;
+        height: 100%;
+        cursor: pointer;
+      }
+    }
+
+    .feature-image {
+      width: 100%;
+      margin-bottom: 10px;
+    }
+
+    .feature-texts {
+      position: relative;
+      width: 100%;
+      border: solid 1px $color-2;
+      padding: 25px 15px;
+
+      &:before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        display: block;
+        width: 8px;
+        height: 100%;
+        background-color: $color-8;
+        @include define-basic-transition(all, 0.3s);
+      }
+
+      &.active {
+        &:before {
+          background-color: $color-6;
+        }
+      }
+
+      .activator-status {
+        color: $color-5;
+        display: inline-block;
+        width: 20px;
+      }
+
+      h2 {
+        margin-bottom: 0;
+      }
+
+      .feature-text {
+        padding-top: 10px;
+        display: none;
+
+        p {
+          font-size: $h6-size-smartphone;
+          line-height: $h6-lineheight-smartphone;
+        }
+      }
+    }
+  }
+
+  .cta-holder {
+    margin: 32px 0 0;
+  }
+}

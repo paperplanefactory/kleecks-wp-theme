@@ -8,7 +8,7 @@
           <h2>
             <?php the_sub_field( 'module_scrolling_text_text' ); ?>
           </h2>
-          <h2>
+          <h2 class="desktop-only">
             <?php the_sub_field( 'module_scrolling_text_text' ); ?>
           </h2>
         </div>

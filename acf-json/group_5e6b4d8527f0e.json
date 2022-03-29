@@ -47,7 +47,9 @@
                         "module-slideshow": "Modulo slideshow (Case studies - Cosa dicono di noi \/ Rassegna stampa \/ comunicato stampa - Immagini)",
                         "module-slideshow-logos": "Modulo slideshow loghi",
                         "module-jobs-listing": "Modulo offerte di lavoro",
-                        "module-kleecks": "Modulo Kleecks"
+                        "module-kleecks": "Modulo Kleecks",
+                        "module-expanding-text": "Modulo FAQ",
+                        "module-cf7": "Modulo Form di contatto"
                     },
                     "default_value": false,
                     "allow_null": 0,
@@ -92,31 +94,6 @@
                     "ui": 1,
                     "ui_on_text": "Mostra",
                     "ui_off_text": "Nascondi"
-                },
-                {
-                    "key": "field_5e6b7547e9fee",
-                    "label": "Colore di sfondo modulo",
-                    "name": "module_bg",
-                    "type": "select",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "choices": {
-                        "colors-white-bg": "Sfondo bianco - testi neri",
-                        "colors-black-bg": "Sfondo nero - testi bianchi"
-                    },
-                    "default_value": false,
-                    "allow_null": 0,
-                    "multiple": 0,
-                    "ui": 0,
-                    "return_format": "value",
-                    "ajax": 0,
-                    "placeholder": ""
                 },
                 {
                     "key": "field_61862f487bb4a",
@@ -488,6 +465,31 @@
                     "open": 0,
                     "multi_expand": 0,
                     "endpoint": 0
+                },
+                {
+                    "key": "field_623eb7b0f1c19",
+                    "label": "Larghezza colonna di testo",
+                    "name": "module_text_column_width",
+                    "type": "select",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "wrapper-padded-more-600": "600px",
+                        "wrapper-padded-more-810": "810px"
+                    },
+                    "default_value": false,
+                    "allow_null": 0,
+                    "multiple": 0,
+                    "ui": 0,
+                    "return_format": "value",
+                    "ajax": 0,
+                    "placeholder": ""
                 },
                 {
                     "key": "field_5e6b52fed806c",
@@ -1143,6 +1145,31 @@
                     "open": 0,
                     "multi_expand": 0,
                     "endpoint": 0
+                },
+                {
+                    "key": "field_6242d0328c363",
+                    "label": "Colore di sfondo",
+                    "name": "module_columns_fix_bgcolor",
+                    "type": "select",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "bg-4": "Bianco",
+                        "bg-10": "Grigio chiaro"
+                    },
+                    "default_value": false,
+                    "allow_null": 0,
+                    "multiple": 0,
+                    "ui": 0,
+                    "return_format": "value",
+                    "ajax": 0,
+                    "placeholder": ""
                 },
                 {
                     "key": "field_5e6b767cd6883",
@@ -1939,31 +1966,6 @@
                     "endpoint": 0
                 },
                 {
-                    "key": "field_618774f2c9a0d",
-                    "label": "Larghezza modulo",
-                    "name": "module_stripe_width",
-                    "type": "select",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "choices": {
-                        "wrapper-padded-container": "Con larghezza massima del contenitore principale",
-                        "wrapper-padded-parent": "Larghezza massima fullscreen meno i margini"
-                    },
-                    "default_value": false,
-                    "allow_null": 0,
-                    "multiple": 0,
-                    "ui": 0,
-                    "return_format": "value",
-                    "ajax": 0,
-                    "placeholder": ""
-                },
-                {
                     "key": "field_6186cf88325db",
                     "label": "Allineamento verticale testo - immagine",
                     "name": "module_stripe_vertical_aligment",
@@ -2003,7 +2005,7 @@
                     },
                     "choices": {
                         "bg-4": "Bianco",
-                        "bg-3": "Grigio chiaro"
+                        "bg-10": "Grigio chiaro"
                     },
                     "default_value": false,
                     "allow_null": 0,
@@ -3348,6 +3350,233 @@
                     "min": 1,
                     "max": 1,
                     "return_format": "object"
+                },
+                {
+                    "key": "field_623c3a2183b29",
+                    "label": "Modulo FAQ",
+                    "name": "",
+                    "type": "accordion",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_5e6b4ddf13dcb",
+                                "operator": "==",
+                                "value": "module-expanding-text"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "open": 0,
+                    "multi_expand": 1,
+                    "endpoint": 0
+                },
+                {
+                    "key": "field_623c3a3283b2a",
+                    "label": "Gestione Argomento FAQ",
+                    "name": "module_faq_subject_repeater",
+                    "type": "repeater",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "collapsed": "",
+                    "min": 0,
+                    "max": 0,
+                    "layout": "block",
+                    "button_label": "Aggiungi Argomento FAQ",
+                    "sub_fields": [
+                        {
+                            "key": "field_623c3c4c89131",
+                            "label": "Argomento",
+                            "name": "",
+                            "type": "accordion",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "open": 0,
+                            "multi_expand": 1,
+                            "endpoint": 0
+                        },
+                        {
+                            "key": "field_623c3ad783b2b",
+                            "label": "Titolo argomento",
+                            "name": "module_faq_subject_repeater_subject",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 1,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        },
+                        {
+                            "key": "field_623c3b0383b2c",
+                            "label": "Gestione FAQ",
+                            "name": "module_faq_subject_repeater_subject_repeater",
+                            "type": "repeater",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "collapsed": "",
+                            "min": 0,
+                            "max": 0,
+                            "layout": "block",
+                            "button_label": "Aggiungi FAQ",
+                            "sub_fields": [
+                                {
+                                    "key": "field_623c3c6289132",
+                                    "label": "FAQ",
+                                    "name": "",
+                                    "type": "accordion",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "open": 0,
+                                    "multi_expand": 1,
+                                    "endpoint": 0
+                                },
+                                {
+                                    "key": "field_623c3b2383b2d",
+                                    "label": "Domanda",
+                                    "name": "module_faq_subject_repeater_subject_repeater_question",
+                                    "type": "text",
+                                    "instructions": "",
+                                    "required": 1,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "",
+                                    "placeholder": "",
+                                    "prepend": "",
+                                    "append": "",
+                                    "maxlength": ""
+                                },
+                                {
+                                    "key": "field_623c3b3983b2e",
+                                    "label": "Risposta",
+                                    "name": "module_faq_subject_repeater_subject_repeater_answer",
+                                    "type": "wysiwyg",
+                                    "instructions": "",
+                                    "required": 1,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "",
+                                    "tabs": "all",
+                                    "toolbar": "full",
+                                    "media_upload": 1,
+                                    "delay": 0
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "key": "field_623c4527c4979",
+                    "label": "Modulo Form di contatto",
+                    "name": "",
+                    "type": "accordion",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_5e6b4ddf13dcb",
+                                "operator": "==",
+                                "value": "module-cf7"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "open": 0,
+                    "multi_expand": 1,
+                    "endpoint": 0
+                },
+                {
+                    "key": "field_623c453cc497a",
+                    "label": "Testo introduttivo",
+                    "name": "module_form_text",
+                    "type": "wysiwyg",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "tabs": "all",
+                    "toolbar": "full",
+                    "media_upload": 1,
+                    "delay": 0
+                },
+                {
+                    "key": "field_623c44b242f79",
+                    "label": "Scegli il form",
+                    "name": "module_form_choose_form",
+                    "type": "relationship",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "post_type": [
+                        "wpcf7_contact_form"
+                    ],
+                    "taxonomy": "",
+                    "filters": [
+                        "search"
+                    ],
+                    "elements": "",
+                    "min": 1,
+                    "max": 1,
+                    "return_format": "id"
                 }
             ]
         }
@@ -3372,5 +3601,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1648049403
+    "modified": 1648546281
 }

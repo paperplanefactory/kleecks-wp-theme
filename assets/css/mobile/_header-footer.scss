@@ -1,18 +1,37 @@
 // main: ../style.scss
 @import '../global/vars';
 @import '../global/mixin';
-$logo-width: 200px;
+$logo-width: 140px;
 $hamburger-width: 55px; // header
 
 #preheader {
+  display: block;
   height: $header-smartphone-height;
 }
 
 #header {
   height: $header-smartphone-height;
+  background-color: $color-4;
+  border-bottom: solid 1px $color-2;
+  @include define-basic-transition(all, 0.3s);
 
-  &.hidden {
-    top: -$header-smartphone-height;
+  &.overlayed {
+    background-color: $color-8;
+    border-bottom: solid 1px $color-8;
+
+    #header-structure {
+      .logo {
+        &:before {
+          background-image: url("assets/images/kleecks-logo-white.svg");
+        }
+      }
+
+      .side-head {
+        .hambuger-element span {
+          background-color: $color-4;
+        }
+      }
+    }
   }
 
   #header-structure {
@@ -24,9 +43,9 @@ $hamburger-width: 55px; // header
       height: $header-smartphone-height;
 
       &:before {
-        top: 10px;
+        top: 20px;
         left: 0;
-        height: calc(100% - 20px);
+        height: 20px;
       }
     }
 
@@ -46,11 +65,15 @@ $hamburger-width: 55px; // header
         li {
           text-align: center !important;
           display: inline-block;
-          margin: 0 2%;
-        }
 
-        li:last-child {
-          margin-right: 0;
+          &.bookdemo-li {}
+
+          &.hamburger-li {
+            .hambuger-element {
+              margin-left: 10px;
+              top: 3px;
+            }
+          }
         }
       }
     }
@@ -66,9 +89,15 @@ $hamburger-width: 55px; // header
   width: 100%;
   height: calc(100vh - #{$header-smartphone-height});
   height: calc((var(--vh, 1vh) * 100) - #{$header-smartphone-height});
+  background-color: $color-8;
+
+  .mobile-book {
+    display: none;
+  }
 
   .menu {
     width: 100%;
+    margin-top: 20px;
 
     .overlay-menu-mobile-css {
       width: 100%;
@@ -78,29 +107,48 @@ $hamburger-width: 55px; // header
         display: block;
         text-align: left;
         overflow: hidden;
+        margin-bottom: 10px;
+        font-size: $h3-size-smartphone;
+        line-height: $h3-lineheight-smartphone;
+        text-transform: uppercase;
 
         a {
           position: relative;
           display: block;
-          padding: 20px 75px 20px $wrapper-padded-smartphone;
+          padding: 20px 15px 10px 0;
+          border-bottom: solid 1px $color-1;
 
           span {
-            position: absolute;
-            top: 50%;
-            right: $wrapper-padded-smartphone;
-            margin-top: -15px;
-            width: 60px;
-            height: 30px;
+            position: relative;
+            display: inline-block;
+            width: 16px;
+            height: 16px;
             text-align: right;
+            color: $color-6;
+            margin-left: 10px;
 
             &:after {
-              content: "";
+              font-family: "kleecks-icons" !important;
+              content: attr(data-icon);
+              font-style: normal !important;
+              font-weight: normal !important;
+              font-variant: normal !important;
+              text-transform: none !important;
+              speak: none;
+              line-height: 1;
+              -webkit-font-smoothing: antialiased;
+              -moz-osx-font-smoothing: grayscale;
+              content: "\61";
               position: absolute;
-              top: -30px;
-              right: 0;
-              display: block;
-              width: 100%;
-              height: 300%;
+              top: 0;
+              right: 1px;
+              width: 16px;
+              height: 16px;
+              font-size: 16px;
+            }
+
+            &.menu-icon-closed {
+              @include define-rotate(180);
             }
           }
         }
@@ -111,9 +159,16 @@ $hamburger-width: 55px; // header
 
       .sub-menu {
         display: none;
+        padding-top: 35px;
+        margin-bottom: 65px;
 
         li {
           width: 100%;
+          font-size: $h4-size-smartphone;
+          line-height: $h4-lineheight-smartphone;
+          font-weight: $font-weight-1;
+          text-transform: none;
+          margin: 0 0 10px;
 
           &:last-child {
             border-bottom: none;
@@ -121,10 +176,28 @@ $hamburger-width: 55px; // header
             margin: 0;
           }
 
+          &.footer-as-h5 {
+            font-size: $h5-size-smartphone;
+            line-height: $h5-lineheight-smartphone;
+            font-weight: $font-weight-4;
+            margin-top: 30px;
+            text-transform: uppercase;
+            pointer-events: none;
+
+            &:first-child {
+              margin-top: 0;
+            }
+
+            a {
+              color: $color-6;
+            }
+          }
+
           a {
             display: block;
             //width: calc(100% - (#{$wrapper-padded-smartphone} * 2));
-            padding: 20px $wrapper-padded-smartphone;
+            padding: 0;
+            border-bottom: none;
 
             &:after {
               content: "";
@@ -147,29 +220,56 @@ $hamburger-width: 55px; // header
 .scroll-opportunity {
   width: 100%;
   height: calc(100vh - #{$header-smartphone-height});
+  padding-bottom: 54px;
 }
 // footer
 
 #footer {
-  padding-top: 72px;
-  padding-bottom: 16px;
+  padding: 44px 0 19px;
 
-  .footer-logo {
-    max-width: 200px;
+  .flex-hold-2 {
+    .flex-hold-child {
+      margin-bottom: 0;
+    }
   }
 
-  .footer-menu {
+  .footer-menu-top {
+    position: relative;
     width: 100%;
-    text-align: left;
-    margin: 50px 0;
+    @include flex-wrap;
 
     li {
-      display: inline-block;
-      margin: 0 20px 0 0;
+      &:nth-child(1) {
+        width: 100px;
+        font-size: $h2-size-smartphone;
+        line-height: $h2-lineheight-smartphone;
+        font-weight: $font-weight-4;
+        text-transform: uppercase;
+      }
 
-      &:last-child {
-        margin: 0;
+      &:nth-child(2) {
+        width: calc(100% - 100px);
+        text-align: right;
       }
     }
+  }
+
+  .footer-menu,
+  .footer-menu-bottom {
+    width: 100%;
+    text-align: left;
+
+    li {
+      display: block;
+      margin: 0 0 25px;
+
+      &:last-child {
+        //margin: 0;
+      }
+    }
+  }
+
+  .inline-socials {
+    margin: 44px 0;
   }
 }

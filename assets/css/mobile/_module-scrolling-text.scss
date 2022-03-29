@@ -2,7 +2,7 @@
 @import '../global/vars';
 @import '../global/mixin';
 
-.module-jobs-listing {
+.module-scrolling-text {
   .module-paddings-top {
     padding-top: $module-vertical-padding-smartphone;
   }
@@ -27,21 +27,32 @@
     padding-bottom: 0;
   }
 
-  .job-listed {
-    border: solid 1px $color-6;
-    padding: 33px 25px;
-    margin-bottom: 20px;
+  .cta-holder {
+    margin: 32px 0 0;
+  }
+}
 
-    h5 {
-      margin-bottom: 5px;
-    }
+.m-scroll {
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 $wrapper-padded-smartphone;
 
-    p {
-      margin-bottom: 15px;
-    }
+  h2 {
+    text-transform: uppercase;
+    color: $color-8;
+    font-weight: $font-weight-5;
+  }
+}
+/*div:hover {
+  animation-play-state: paused;
+}*/
+@keyframes scrollText {
+  from {
+    transform: translateX(0%);
   }
 
-  .cta-holder {
-    margin: 0;
+  to {
+    transform: translateX(-50%);
   }
 }

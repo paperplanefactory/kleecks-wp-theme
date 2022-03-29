@@ -1,7 +1,8 @@
 // main: ../style.scss
 $break-desktop: 1024px;
 $break-tablet-end: 1023px;
-$break-mobile-start: 1px; // fonts vars
+$break-mobile-start: 1px;
+$break-small-mobile-end: 320px; // fonts vars
 $font-main: "Inter", sans-serif;
 $font-sub: "marydale", sans-serif;
 $font-weight-1: 400; //Inter regular
@@ -10,11 +11,11 @@ $font-weight-3: 600; //Inter semibold
 $font-weight-4: 700; //Inter bold, Marydale bold
 $font-weight-5: 800; //Inter extra bold
 $header-desktop-height: 68px; // header sizes
-$header-smartphone-height: 64px; // header sizes
+$header-smartphone-height: 60px; // header sizes
 $wrapper-padded-desktop: 3.5vw; // wrapper paddings
-$wrapper-padded-smartphone: 5vw; // wrapper paddings
+$wrapper-padded-smartphone: 6vw; // wrapper paddings
 $module-vertical-padding-desktop: 80px; // modules vertical paddings
-$module-vertical-padding-smartphone: 40px; // modules vertical paddings
+$module-vertical-padding-smartphone: 5vh; // modules vertical paddings
 $flex-hold-column-thin-space-desktop: 36px; // modules vertical paddings
 $flex-hold-column-wide-space-desktop: 72px; // modules vertical paddings
 $flex-hold-column-thin-space-smartphone: 24px; // modules vertical paddings
@@ -28,6 +29,7 @@ $color-6: #59d8a1;
 $color-7: #ffd252;
 $color-8: #232373;
 $color-9: #fd7c66;
+$color-10: #F7F7FC;
 $color-upload-icon-clear: '%23FFFFFF'; // codificato per funzionare con SVG in linea nei CSS
 $color-upload-icon-dark: '%23000000'; // codificato per funzionare con SVG in linea nei CSS
 $color-form-ok: #0DBA04; // form usability colors

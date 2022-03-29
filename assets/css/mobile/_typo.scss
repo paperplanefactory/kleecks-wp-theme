@@ -7,6 +7,74 @@ h1 {
   font-size: $h1-size-smartphone;
   line-height: $h1-lineheight-smartphone;
   margin-bottom: $h1-marginbottom-smartphone;
+
+  .underline-green {
+    white-space: nowrap;
+    position: relative;
+
+    &:before {
+      content: "";
+      position: absolute;
+      z-index: -1;
+      bottom: 4px;
+      left: -5px;
+      width: calc(100% + 10px);
+      height: 11px;
+      background-color: $color-6;
+      @include define-border-radius(16px);
+    }
+  }
+
+  .underline-yellow {
+    white-space: nowrap;
+    position: relative;
+
+    &:before {
+      content: "";
+      position: absolute;
+      z-index: -1;
+      bottom: 4px;
+      left: -5px;
+      width: calc(100% + 10px);
+      height: 11px;
+      background-color: $color-7;
+      @include define-border-radius(16px);
+    }
+  }
+
+  .underline-blue {
+    white-space: nowrap;
+    position: relative;
+
+    &:before {
+      content: "";
+      position: absolute;
+      z-index: -1;
+      bottom: 4px;
+      left: -5px;
+      width: calc(100% + 10px);
+      height: 11px;
+      background-color: $color-5;
+      @include define-border-radius(16px);
+    }
+  }
+
+  .underline-red {
+    white-space: nowrap;
+    position: relative;
+
+    &:before {
+      content: "";
+      position: absolute;
+      z-index: -1;
+      bottom: 4px;
+      left: -5px;
+      width: calc(100% + 10px);
+      height: 11px;
+      background-color: $color-9;
+      @include define-border-radius(16px);
+    }
+  }
 }
 
 .as-h2,
@@ -37,6 +105,26 @@ h5 {
   margin-bottom: $h5-marginbottom-smartphone;
 }
 
+.topic-title {
+  position: relative;
+  padding-left: 15px;
+
+  &:before {
+    position: absolute;
+    top: 5px;
+    left: 0;
+    display: inline-block;
+    content: "";
+    width: 9px;
+    height: 13px;
+    margin-right: 5px;
+    background-image: url("assets/images/kleecks-features-title.svg");
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+}
+
 .as-h6,
 h6 {
   font-size: $h6-size-smartphone;
@@ -51,14 +139,20 @@ p {
   padding: 0;
 }
 
+#footer {
+  p {
+    font-size: $h6-size-smartphone;
+    line-height: $h6-lineheight-desktop;
+    margin-bottom: 0;
+  }
+}
+
 .cta-1 {
   font-size: $cta1-size-smartphone;
   line-height: $cta1-lineheight-smartphone;
 }
 
 .cta-2,
-.mega-menu,
-.menu,
 .navigation {
   font-size: $cta2-size-smartphone;
   line-height: $cta2-lineheight-smartphone;
@@ -75,8 +169,10 @@ p {
 }
 
 .text-extra-2 {
-  font-size: $extra2-size-smartphone;
-  line-height: $extra2-lineheight-smartphone;
+  //font-size: $extra2-size-smartphone;
+  //line-height: $extra2-lineheight-smartphone;
+  font-size: $data-size-smartphone;
+  line-height: $data-size-smartphone;
 }
 
 .content-styled {
@@ -116,6 +212,10 @@ p {
         font-size: 20px;
         font-weight: $font-weight-1;
       }
+
+      &:after {
+        height: calc(#{$paragraph-marginbottom-smartphone} / 2);
+      }
     }
   }
 
@@ -129,6 +229,10 @@ p {
     &:before {
       font-family: $font-main;
       font-size: $paragraph-size-smartphone;
+    }
+
+    &:after {
+      height: calc(#{$paragraph-marginbottom-smartphone} / 2);
     }
   }
 }
@@ -147,9 +251,13 @@ p {
 
 .expander {
   font-family: $font-main;
-  font-weight: $font-weight-1;
-  font-size: $h4-size-smartphone;
-  line-height: $h4-lineheight-smartphone;
+  font-weight: $font-weight-3;
+  font-size: $paragraph-size-smartphone;
+  line-height: $paragraph-lineheight-smartphone;
+
+  .faq-counter {
+    font-size: 18px;
+  }
 }
 
 h1,
@@ -165,4 +273,116 @@ ul {
   -moz-hyphens: auto;
   -ms-hyphens: auto;
   hyphens: auto;
+}
+
+.title-arrows-area-top {
+  position: relative;
+  min-height: 110px;
+
+  &.space-opening-arrow-top-left {
+    min-height: 110px;
+  }
+
+  &.space-opening-arrow-top-right {
+    min-height: 70px;
+  }
+
+  &.space-opening-arrow-top-left.space-opening-arrow-top-right {
+    min-height: 110px;
+  }
+
+  div[class*="title-arrow"] {
+    position: absolute;
+    background-repeat: no-repeat;
+  }
+
+  .title-arrow-top-left {
+    height: 110px;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    padding: 0 0 0 70px;
+    background-image: url("assets/images/arrow-top-left.svg");
+    background-position: 0 0;
+    background-size: auto calc(100% - 10px);
+  }
+
+  .title-arrow-top-right {
+    height: 45px;
+    width: 227px;
+    bottom: 0;
+    right: 20px;
+    padding: 0 50px 0 0;
+    background-image: url("assets/images/arrow-top-right.svg");
+    background-position: right 10px;
+    background-size: auto calc(100% - 10px);
+    text-align: right;
+  }
+}
+
+.title-arrows-area-bottom {
+  position: relative;
+
+  div[class*="title-arrow"] {
+    position: absolute;
+    background-repeat: no-repeat;
+  }
+
+  .title-arrow-bottom-right {
+    height: 110px;
+    width: 160px;
+    top: 0;
+    right: 40px;
+    //padding: 0 130px 0 0;
+    background-image: url("assets/images/arrow-bottom-right.svg");
+    background-position: calc(50% + 20px) 0;
+    background-size: auto calc(100% - 20px);
+    text-align: center;
+
+    span {
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+    }
+  }
+}
+
+.checklist {
+  position: relative;
+  display: block;
+  width: 100%;
+  margin: 40px 0 0;
+
+  li {
+    background-image: url("assets/images/kleecks-checklist-item.svg");
+    background-position: 0 0;
+    background-size: 33px 28px;
+    background-repeat: no-repeat;
+    padding: 0 0 0 50px;
+    margin: 0 0 40px;
+    min-height: 46px;
+
+    h4 {
+      margin-bottom: 12px;
+    }
+  }
+}
+
+.breadcrumbs-holder {
+  font-size: $h6-size-smartphone;
+  line-height: $h6-size-smartphone;
+}
+
+.footer-menu,
+.footer-menu-bottom {
+  font-size: $h6-size-smartphone;
+  line-height: $h6-lineheight-smartphone;
+}
+
+.opening-kleecks {
+  .title-arrows-area-bottom,
+  .title-arrows-area-top {
+    display: none;
+  }
 }

@@ -646,6 +646,71 @@
             "min": 1,
             "max": 1,
             "return_format": "object"
+        },
+        {
+            "key": "field_623c4f27e51f1",
+            "label": "Elenco testi",
+            "name": "",
+            "type": "accordion",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5e6bad4b7f721",
+                        "operator": "==",
+                        "value": "opening-text"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "open": 0,
+            "multi_expand": 0,
+            "endpoint": 0
+        },
+        {
+            "key": "field_623c4f7be51f2",
+            "label": "Composizione elenco",
+            "name": "page_opening_composizione_elenco",
+            "type": "repeater",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "collapsed": "",
+            "min": 0,
+            "max": 0,
+            "layout": "block",
+            "button_label": "Aggiungi voce",
+            "sub_fields": [
+                {
+                    "key": "field_623c5010e51f3",
+                    "label": "Voce elenco",
+                    "name": "page_opening_composizione_elenco_voce",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                }
+            ]
         }
     ],
     "location": [
@@ -675,5 +740,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1647690296
+    "modified": 1648119844
 }

@@ -142,6 +142,14 @@ p {
   padding: 0;
 }
 
+#footer {
+  p {
+    font-size: $h5-size-desktop;
+    line-height: $h5-lineheight-desktop;
+    margin-bottom: 0;
+  }
+}
+
 .cta-1 {
   font-size: $cta1-size-desktop;
   line-height: $cta1-lineheight-desktop;
@@ -201,11 +209,13 @@ p {
     margin-bottom: $paragraph-marginbottom-desktop;
 
     li {
-      display: table-row;
-
       &:before {
         font-size: 20px;
         font-weight: $font-weight-1;
+      }
+
+      &:after {
+        height: calc(#{$paragraph-marginbottom-desktop} / 2);
       }
     }
   }
@@ -220,6 +230,10 @@ p {
     &:before {
       font-family: $font-main;
       font-size: $paragraph-size-desktop;
+    }
+
+    &:after {
+      height: calc(#{$paragraph-marginbottom-desktop} / 2);
     }
   }
 }
@@ -238,9 +252,23 @@ p {
 
 .expander {
   font-family: $font-main;
-  font-weight: $font-weight-1;
-  font-size: $h4-size-desktop;
-  line-height: $h4-lineheight-desktop;
+  font-weight: $font-weight-3;
+  font-size: $paragraph-size-desktop;
+  line-height: $paragraph-lineheight-desktop;
+
+  .faq-counter {
+    font-size: 18px;
+  }
+}
+
+.expandable-content {
+  ol,
+  p,
+  ul {
+    font-size: $h5-size-desktop;
+    line-height: $h5-lineheight-desktop;
+    margin-bottom: $h5-marginbottom-desktop;
+  }
 }
 
 .title-arrows-area-top {
@@ -332,4 +360,9 @@ p {
       margin-bottom: 16px;
     }
   }
+}
+
+.breadcrumbs-holder {
+  font-size: $h6-size-desktop;
+  line-height: $h6-size-desktop;
 }

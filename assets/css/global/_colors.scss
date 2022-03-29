@@ -5,6 +5,16 @@
 .txt-1 {
 	color: $color-1;
 
+	a:link,
+	a:visited {
+		color: $color-1;
+	}
+
+	a:active,
+	a:hover {
+		color: $color-8;
+	}
+
 	a.default-button:link,
 	a.default-button:visited {
 		color: $color-8 !important;
@@ -111,6 +121,10 @@
 	color: $color-9;
 }
 
+.txt-10 {
+	color: $color-10;
+}
+
 .content-styled {
 	h1,
 	h2,
@@ -172,6 +186,10 @@
 
 .bg-9 {
 	background-color: $color-9;
+}
+
+.bg-10 {
+	background-color: $color-10;
 }
 
 .default-box-shadow {

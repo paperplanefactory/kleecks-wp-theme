@@ -6,7 +6,7 @@ if ( $module_banner_color === 'bg-5' ) {
   $banner_cta_colors = 'default-button-yellow-b';
 }
 else {
-  $banner_colors_class = 'bg-3 txt-1';
+  $banner_colors_class = 'bg-3 txt-8';
   $banner_cta_colors = 'default-button-yellow';
 }
 $banner = get_sub_field( 'module_banner_object' );

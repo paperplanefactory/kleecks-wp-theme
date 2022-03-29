@@ -1,0 +1,20 @@
+// main: ../style.scss
+@import '../global/vars';
+@import '../global/mixin';
+
+.side-head {
+	ul {
+		li {
+			&.bookdemo-li {
+				display: none !important;
+			}
+		}
+	}
+}
+
+#head-overlay {
+	.mobile-book {
+		margin-top: 34px;
+		display: block !important;
+	}
+}

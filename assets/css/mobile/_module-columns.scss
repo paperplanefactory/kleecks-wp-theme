@@ -35,6 +35,16 @@
   .module-column-box {
     margin-bottom: calc(#{$flex-hold-column-wide-space-smartphone} * 2);
 
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      margin-top: 0;
+      margin-bottom: 10px;
+    }
+
     .column-image {
       position: relative;
       display: inline-block;
@@ -61,6 +71,10 @@
 
     .cta-holder {
       text-align: inherit;
+      margin: 24px 0 0;
+    }
+
+    .inline-socials {
       margin: 24px 0 0;
     }
   }
