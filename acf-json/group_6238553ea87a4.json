@@ -43,7 +43,7 @@
                     "label": "Titolo",
                     "name": "feature_title",
                     "type": "text",
-                    "instructions": "",
+                    "instructions": "<strong>Sottolineatura gialla:<\/strong><br \/>\r\n&lt;span class=\"underline-yellow\"&gt;Parole sottolineate&lt;\/span&gt;<br \/>\r\n<strong>Sottolineatura verde:<\/strong><br \/>\r\n&lt;span class=\"underline-green\"&gt;Parole sottolineate&lt;\/span&gt;<br \/>\r\n<strong>Sottolineatura blu:<\/strong><br \/>\r\n&lt;span class=\"underline-blue\"&gt;Parole sottolineate&lt;\/span&gt;<br \/>\r\n<strong>Sottolineatura rossa:<\/strong><br \/>\r\n&lt;span class=\"underline-red\"&gt;Parole sottolineate&lt;\/span&gt;<br \/>",
                     "required": 1,
                     "conditional_logic": 0,
                     "wrapper": {
@@ -121,5 +121,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1647873209
+    "modified": 1648630656
 }

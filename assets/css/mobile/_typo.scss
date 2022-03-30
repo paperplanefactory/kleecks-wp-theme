@@ -89,6 +89,10 @@ h3 {
   font-size: $h3-size-smartphone;
   line-height: $h3-lineheight-smartphone;
   margin-bottom: $h3-marginbottom-smartphone;
+
+  &.underline-column {
+    margin-bottom: calc(#{$h3-marginbottom-smartphone} * 2) !important;
+  }
 }
 
 .as-h4,
@@ -311,11 +315,11 @@ ul {
     height: 45px;
     width: 227px;
     bottom: 0;
-    right: 20px;
-    padding: 0 50px 0 0;
-    background-image: url("assets/images/arrow-top-right.svg");
-    background-position: right 10px;
-    background-size: auto calc(100% - 10px);
+    right: 0;
+    padding: 0 0 0 50px;
+    background-image: url("assets/images/arrow-top-right-b.svg");
+    background-position: 0 0;
+    background-size: auto 100%;
     text-align: right;
   }
 }
@@ -352,7 +356,7 @@ ul {
   position: relative;
   display: block;
   width: 100%;
-  margin: 40px 0 0;
+  margin: 20px 0 0;
 
   li {
     background-image: url("assets/images/kleecks-checklist-item.svg");
@@ -360,7 +364,7 @@ ul {
     background-size: 33px 28px;
     background-repeat: no-repeat;
     padding: 0 0 0 50px;
-    margin: 0 0 40px;
+    margin: 0 0 20px;
     min-height: 46px;
 
     h4 {
@@ -384,5 +388,50 @@ ul {
   .title-arrows-area-bottom,
   .title-arrows-area-top {
     display: none;
+  }
+}
+
+h2 {
+  span {
+    position: relative;
+    text-decoration: underline;
+    -webkit-text-decoration-style: solid;
+    text-decoration-style: solid;
+    text-decoration-thickness: 6px;
+  }
+}
+
+h3 {
+  span {
+    position: relative;
+    text-decoration: underline;
+    -webkit-text-decoration-style: solid;
+    text-decoration-style: solid;
+    text-decoration-thickness: 4px;
+  }
+}
+
+h2,
+h3 {
+  span {
+    &.underline-green {
+      -webkit-text-decoration-color: $color-6;
+      text-decoration-color: $color-6;
+    }
+
+    &.underline-yellow {
+      -webkit-text-decoration-color: $color-7;
+      text-decoration-color: $color-7;
+    }
+
+    &.underline-blue {
+      -webkit-text-decoration-color: $color-5;
+      text-decoration-color: $color-5;
+    }
+
+    &.underline-red {
+      -webkit-text-decoration-color: $color-9;
+      text-decoration-color: $color-9;
+    }
   }
 }

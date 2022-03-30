@@ -778,6 +778,25 @@
                             "new_lines": "br"
                         },
                         {
+                            "key": "field_62432ea6a5f30",
+                            "label": "Titolo",
+                            "name": "module_columns_columns_repeater_title",
+                            "type": "textarea",
+                            "instructions": "<strong>Sottolineatura gialla:<\/strong><br \/>\r\n&lt;span class=\"underline-yellow\"&gt;Parole sottolineate&lt;\/span&gt;<br \/>\r\n<strong>Sottolineatura verde:<\/strong><br \/>\r\n&lt;span class=\"underline-green\"&gt;Parole sottolineate&lt;\/span&gt;<br \/>\r\n<strong>Sottolineatura blu:<\/strong><br \/>\r\n&lt;span class=\"underline-blue\"&gt;Parole sottolineate&lt;\/span&gt;<br \/>\r\n<strong>Sottolineatura rossa:<\/strong><br \/>\r\n&lt;span class=\"underline-red\"&gt;Parole sottolineate&lt;\/span&gt;<br \/>",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "maxlength": "",
+                            "rows": "",
+                            "new_lines": "br"
+                        },
+                        {
                             "key": "field_5e6b681b711be",
                             "label": "Contenuto",
                             "name": "module_columns_columns_repeater_content",
@@ -3601,5 +3620,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1648546281
+    "modified": 1648570255
 }

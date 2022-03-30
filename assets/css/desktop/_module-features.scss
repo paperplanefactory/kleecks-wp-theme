@@ -30,7 +30,7 @@
   .flex-hold-features {
     .feature-texts {
       width: calc(100% - 810px);
-      padding-right: 30px;
+      padding-right: 5vw;
 
       h4 {
         margin-bottom: 33px;
@@ -62,6 +62,7 @@
 
         .activator-status {
           color: $color-5;
+          text-decoration: none;
         }
       }
 

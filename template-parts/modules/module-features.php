@@ -6,7 +6,7 @@ if( $module_features_choose_features ) : foreach( $module_features_choose_featur
   <a name="section-<?php echo $module_count; ?>" class="section-anchor"></a>
   <div class="<?php the_sub_field( 'module_vertical_top_space' ); ?> <?php the_sub_field( 'module_vertical_bottom_space' ); ?>">
     <div class="wrapper-padded">
-      <div class="wrapper-padded-more-1230">
+      <div class="wrapper-padded-container">
         <?php if ( get_sub_field( 'module_features_title' ) ) : ?>
           <h4 class="allupper txt-5 topic-title"><?php the_sub_field( 'module_features_title' ); ?></h4>
         <?php endif; ?>
@@ -19,7 +19,7 @@ if( $module_features_choose_features ) : foreach( $module_features_choose_featur
             <?php
             while ( have_rows( 'gestione_features' ) ) : the_row();
             $feature_counter ++;
-            $activator_status_value = "+";
+            $activator_status_value = "-";
 
             ?>
             <div class="feature-slide">
@@ -29,19 +29,19 @@ if( $module_features_choose_features ) : foreach( $module_features_choose_featur
                 $image_data = array(
                     'image_type' => 'acf_sub_field', // options: post_thumbnail, acf_field, acf_sub_field
                     'image_value' => 'feature_image', // se utilizzi un custom field indica qui il nome del campo
-                    'size_fallback' => 'column'
+                    'size_fallback' => 'slide'
                 );
                 $image_sizes = array( // qui sono definiti i ritagli o dimensioni. Devono corrispondere per numero a quanto dedinfito nella funzione nei parametri data-srcset o srcset
-                    'desktop_default' => 'column',
-                    'desktop_hd' => 'column_hd',
-                    'mobile_default' => 'column',
-                    'mobile_hd' => 'column_hd',
+                    'desktop_default' => 'slide',
+                    'desktop_hd' => 'slide_hd',
+                    'mobile_default' => 'slide',
+                    'mobile_hd' => 'slide_hd',
                     'lazy_placheholder' => 'micro'
                 );
                 print_theme_image_lazyslick( $image_data, $image_sizes );
                 ?>
               </div>
-              <div class="feature-texts feature-texts-js-<?php echo $feature_counter; ?>">
+              <div class="feature-texts active feature-texts-js-<?php echo $feature_counter; ?>">
                 <h2 class="txt-8"><span class="activator-status activator-status-js-<?php echo $feature_counter; ?>"><?php echo $activator_status_value; ?></span> <?php the_sub_field( 'feature_title' ); ?></h2>
                 <div class="feature-text last-child-no-margin txt-1 feature-content-js-<?php echo $feature_counter; ?>">
                   <p>
@@ -94,13 +94,13 @@ if( $module_features_choose_features ) : foreach( $module_features_choose_featur
                   $image_data = array(
                       'image_type' => 'acf_sub_field', // options: post_thumbnail, acf_field, acf_sub_field
                       'image_value' => 'feature_image', // se utilizzi un custom field indica qui il nome del campo
-                      'size_fallback' => 'column'
+                      'size_fallback' => 'slide'
                   );
                   $image_sizes = array( // qui sono definiti i ritagli o dimensioni. Devono corrispondere per numero a quanto dedinfito nella funzione nei parametri data-srcset o srcset
-                      'desktop_default' => 'column',
-                      'desktop_hd' => 'column_hd',
-                      'mobile_default' => 'column',
-                      'mobile_hd' => 'column_hd',
+                      'desktop_default' => 'slide',
+                      'desktop_hd' => 'slide_hd',
+                      'mobile_default' => 'slide',
+                      'mobile_hd' => 'slide_hd',
                       'lazy_placheholder' => 'micro'
                   );
                   print_theme_image_lazyslick( $image_data, $image_sizes );

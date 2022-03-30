@@ -90,6 +90,10 @@ h3 {
   font-size: $h3-size-desktop;
   line-height: $h3-lineheight-desktop;
   margin-bottom: $h3-marginbottom-desktop;
+
+  &.underline-column {
+    margin-bottom: calc(#{$h3-marginbottom-desktop} * 2) !important;
+  }
 }
 
 .as-h4,
@@ -107,8 +111,12 @@ h5 {
 }
 
 .topic-title {
+  position: relative;
+  padding-left: 22px;
+
   &:before {
-    position: relative;
+    position: absolute;
+    left: 0;
     top: 4px;
     display: inline-block;
     content: "";
@@ -365,4 +373,49 @@ p {
 .breadcrumbs-holder {
   font-size: $h6-size-desktop;
   line-height: $h6-size-desktop;
+}
+
+h2 {
+  span {
+    position: relative;
+    text-decoration: underline;
+    -webkit-text-decoration-style: solid;
+    text-decoration-style: solid;
+    text-decoration-thickness: 8px;
+  }
+}
+
+h3 {
+  span {
+    position: relative;
+    text-decoration: underline;
+    -webkit-text-decoration-style: solid;
+    text-decoration-style: solid;
+    text-decoration-thickness: 6px;
+  }
+}
+
+h2,
+h3 {
+  span {
+    &.underline-green {
+      -webkit-text-decoration-color: $color-6;
+      text-decoration-color: $color-6;
+    }
+
+    &.underline-yellow {
+      -webkit-text-decoration-color: $color-7;
+      text-decoration-color: $color-7;
+    }
+
+    &.underline-blue {
+      -webkit-text-decoration-color: $color-5;
+      text-decoration-color: $color-5;
+    }
+
+    &.underline-red {
+      -webkit-text-decoration-color: $color-9;
+      text-decoration-color: $color-9;
+    }
+  }
 }

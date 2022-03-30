@@ -32,14 +32,14 @@
   .slide-case-study,
   .slide-comunicato-stampa-js {
     .slick-list {
-      overflow: visible;
+      //overflow: visible;
     }
 
     .slick-slide {
-      width: 83vw;
+      //width: 83vw;
       opacity: 0.35;
       @include define-basic-transition(all, 0.3s);
-      margin-right: $wrapper-padded-smartphone;
+      //margin-right: $wrapper-padded-smartphone;
       margin-bottom: 20px;
 
       &.slick-active {

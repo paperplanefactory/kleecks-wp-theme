@@ -3,7 +3,7 @@
   <a name="section-<?php echo $module_count; ?>" class="section-anchor"></a>
   <div class="<?php the_sub_field( 'module_vertical_top_space' ); ?> <?php the_sub_field( 'module_vertical_bottom_space' ); ?>">
     <div class="wrapper-padded">
-      <div class="wrapper-padded-more-1230">
+      <div class="wrapper-padded-more-container">
         <div class="flex-hold flex-hold-<?php the_sub_field( 'module_columns_columns_number' ); ?> margins-thin">
           <?php
           if ( have_rows( 'module_columns_columns_repeater' ) ) : while ( have_rows( 'module_columns_columns_repeater' ) ) : the_row();
@@ -83,6 +83,10 @@
                     <h6><?php the_sub_field( 'module_columns_columns_repeater_counter_description' ); ?></h6>
                   <?php endif; ?>
                 </div>
+              <?php endif; ?>
+
+              <?php if ( get_sub_field( 'module_columns_columns_repeater_title' ) ) : ?>
+                <h3 class="txt-8 underline-column"><?php the_sub_field( 'module_columns_columns_repeater_title' ); ?></h3>
               <?php endif; ?>
               <?php if ( get_sub_field( 'module_columns_columns_repeater_content' ) ) : ?>
                 <div class="content-styled last-child-no-margin">

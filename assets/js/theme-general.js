@@ -255,8 +255,6 @@ jQuery('.logos-slideshow-extended-js').slick({
   }]
 });
 
-
-
 jQuery('.feature-image-slider-js').slick({
   lazyLoad: 'progressive',
   dots: false,
@@ -270,9 +268,10 @@ jQuery('.feature-image-slider-js').slick({
   slidesToScroll: 1,
   arrows: false,
 });
+
 jQuery('.features-mobile-slider-js').slick({
   lazyLoad: 'progressive',
-  dots: false,
+  dots: true,
   focusOnSelect: true,
   draggable: true,
   infinite: true,

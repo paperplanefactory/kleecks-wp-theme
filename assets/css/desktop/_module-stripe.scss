@@ -43,7 +43,7 @@
         order: 1;
 
         .spacer {
-          padding-right: $flex-hold-column-thin-space-desktop;
+          //padding-right: $flex-hold-column-thin-space-desktop;
         }
       }
 
@@ -51,8 +51,8 @@
         order: 2;
 
         .spacer {
-          padding: 20px $flex-hold-column-thin-space-desktop 20px $flex-hold-column-wide-space-desktop;
-          max-width: 580px;
+          padding: 20px 0 20px 5vw;
+          max-width: 680px;
         }
       }
     }
@@ -62,7 +62,7 @@
         order: 2;
 
         .spacer {
-          padding-left: $flex-hold-column-thin-space-desktop;
+          //padding-left: $flex-hold-column-thin-space-desktop;
         }
       }
 
@@ -70,8 +70,8 @@
         order: 1;
 
         .spacer {
-          padding: 20px $flex-hold-column-wide-space-desktop 20px 0;
-          max-width: 580px;
+          padding: 20px 5vw 20px 2.5vw;
+          max-width: 680px;
           margin-right: auto;
         }
       }

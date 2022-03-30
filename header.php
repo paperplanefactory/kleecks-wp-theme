@@ -16,11 +16,11 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta content="text/html; charset=UTF-8; X-Content-Type-Options=nosniff" http-equiv="Content-Type" />
 <!-- Chrome, Firefox OS and Opera -->
-<meta name="theme-color" content="#000000">
+<meta name="theme-color" content="#59d8a1">
 <!-- Windows Phone -->
-<meta name="msapplication-navbutton-color" content="#000000">
+<meta name="msapplication-navbutton-color" content="#59d8a1">
 <!-- iOS Safari -->
-<meta name="apple-mobile-web-app-status-bar-style" content="#000000">
+<meta name="apple-mobile-web-app-status-bar-style" content="#59d8a1">
 <title><?php wp_title( '|', true, 'right' ); ?></title>
 <link rel="profile" href="http://gmpg.org/xfn/11">
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />

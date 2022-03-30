@@ -34,7 +34,7 @@
 
   .module-column-box {
     margin-bottom: calc(#{$flex-hold-column-wide-space-smartphone} * 2);
-
+    //margin-bottom: $flex-hold-column-wide-space-smartphone;
     h1,
     h2,
     h3,
@@ -76,6 +76,16 @@
 
     .inline-socials {
       margin: 24px 0 0;
+
+      li {
+        text-align: center !important;
+        display: inline-block;
+        width: 24px;
+        height: 24px;
+        margin: 0 20px 0 0;
+        overflow: hidden;
+        font-size: 24px;
+      }
     }
   }
 }

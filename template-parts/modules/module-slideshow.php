@@ -3,7 +3,7 @@
   <a name="section-<?php echo $module_count; ?>" class="section-anchor"></a>
   <div class="<?php the_sub_field( 'module_vertical_top_space' ); ?> <?php the_sub_field( 'module_vertical_bottom_space' ); ?>">
     <div class="wrapper-padded">
-      <div class="wrapper-padded-more-1230">
+      <div class="wrapper-padded-container">
         <?php if ( get_sub_field( 'module_slideshow_topic' ) ) : ?>
           <h4 class="allupper txt-5 topic-title"><?php the_sub_field( 'module_slideshow_topic' ); ?></h4>
         <?php endif; ?>

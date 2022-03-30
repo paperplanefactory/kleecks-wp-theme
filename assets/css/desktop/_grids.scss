@@ -129,12 +129,12 @@
     .fix {
       order: 1;
       width: 390px;
-      margin: 0 $flex-hold-column-thin-space-desktop $flex-hold-column-thin-space-desktop 0;
+      margin: 0 calc(#{$flex-hold-column-thin-space-desktop} * 4) $flex-hold-column-thin-space-desktop 0;
     }
 
     .nofix {
       order: 2;
-      width: calc(100% - 390px - #{$flex-hold-column-thin-space-desktop});
+      width: calc(100% - 390px - (#{$flex-hold-column-thin-space-desktop} * 4));
       margin-right: 0;
     }
   }

@@ -92,6 +92,7 @@
         color: $color-5;
         display: inline-block;
         width: 20px;
+        text-decoration: none;
       }
 
       h2 {
@@ -100,8 +101,7 @@
 
       .feature-text {
         padding-top: 10px;
-        display: none;
-
+        //display: none;
         p {
           font-size: $h6-size-smartphone;
           line-height: $h6-lineheight-smartphone;
