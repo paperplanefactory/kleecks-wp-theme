@@ -31,3 +31,7 @@ function paperplane_theme_load_theme_textdomain() {
   load_theme_textdomain( 'paperPlane-blankTheme', get_template_directory() . '/languages' );
 }
 add_action( 'after_setup_theme', 'paperplane_theme_load_theme_textdomain' );
+
+add_action( 'after_setup_theme', function() {
+	get_template_part( 'libraries/Updater' );
+});
