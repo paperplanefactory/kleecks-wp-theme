@@ -4,6 +4,9 @@
   <div class="<?php the_sub_field( 'module_vertical_top_space' ); ?> <?php the_sub_field( 'module_vertical_bottom_space' ); ?>">
     <div class="wrapper-padded">
       <div class="wrapper-padded-more-container">
+        <?php if ( get_sub_field( 'module_columns_columns_topic' ) ) : ?>
+          <h4 class="allupper txt-5 topic-title"><?php the_sub_field( 'module_columns_columns_topic' ); ?></h4>
+        <?php endif; ?>
         <div class="flex-hold flex-hold-<?php the_sub_field( 'module_columns_columns_number' ); ?> margins-thin">
           <?php
           if ( have_rows( 'module_columns_columns_repeater' ) ) : while ( have_rows( 'module_columns_columns_repeater' ) ) : the_row();

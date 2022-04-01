@@ -109,14 +109,23 @@ h5 {
 }
 
 .content-styled {
+  span {
+    text-decoration: none;
+  }
+
   strong {
     font-weight: $font-weight-3;
+  }
+
+  p {
+    color: $color-11;
   }
 
   ol,
   ul {
     font-weight: $font-weight-1;
     //font-family: $font-sub;
+    color: $color-11;
   }
 
   ul {

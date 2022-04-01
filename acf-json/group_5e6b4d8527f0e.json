@@ -536,6 +536,25 @@
                     "endpoint": 0
                 },
                 {
+                    "key": "field_6244853ab4892",
+                    "label": "Topic",
+                    "name": "module_columns_columns_topic",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                },
+                {
                     "key": "field_5e6b67032ac7e",
                     "label": "Numero di colonne",
                     "name": "module_columns_columns_number",
@@ -3603,9 +3622,9 @@
     "location": [
         [
             {
-                "param": "post_type",
+                "param": "page_template",
                 "operator": "==",
-                "value": "page"
+                "value": "default"
             }
         ]
     ],
@@ -3620,5 +3639,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1648570255
+    "modified": 1648657818
 }

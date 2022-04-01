@@ -464,7 +464,7 @@ textarea {
 
 #footer .inline-socials a:active,
 #footer .inline-socials a:hover {
-  color: #ffd252;
+  color: #FFD618;
 }
 
 #footer .footer-menu-bottom li {
@@ -507,8 +507,8 @@ textarea {
 .txt-1 a.default-button:link,
 .txt-1 a.default-button:visited {
   color: #232373 !important;
-  background-color: #ffd252 !important;
-  border-color: #ffd252;
+  background-color: #FFD618 !important;
+  border-color: #FFD618;
 }
 
 .txt-1 a.default-button:active,
@@ -575,7 +575,7 @@ textarea {
 }
 
 .txt-7 {
-  color: #ffd252;
+  color: #FFD618;
 }
 
 .txt-8 {
@@ -595,8 +595,8 @@ textarea {
 .txt-8 a.default-button:link,
 .txt-8 a.default-button:visited {
   color: #232373 !important;
-  background-color: #ffd252 !important;
-  border-color: #ffd252;
+  background-color: #FFD618 !important;
+  border-color: #FFD618;
 }
 
 .txt-8 a.default-button:active,
@@ -648,7 +648,7 @@ textarea {
 }
 
 .bg-7 {
-  background-color: #ffd252;
+  background-color: #FFD618;
 }
 
 .bg-8 {
@@ -744,8 +744,8 @@ a.default-button-b-blue:hover {
 #header .cta-navi a:link,
 #header .cta-navi a:visited {
   color: #232373 !important;
-  background-color: #ffd252 !important;
-  border-color: #ffd252;
+  background-color: #FFD618 !important;
+  border-color: #FFD618;
 }
 
 #header .cta-navi a:active,
@@ -758,8 +758,8 @@ a.default-button-b-blue:hover {
 a.default-button-yellow:link,
 a.default-button-yellow:visited {
   color: #232373 !important;
-  background-color: #ffd252 !important;
-  border-color: #ffd252;
+  background-color: #FFD618 !important;
+  border-color: #FFD618;
 }
 
 a.default-button-yellow:active,
@@ -772,8 +772,8 @@ a.default-button-yellow:hover {
 a.default-button-yellow-b:link,
 a.default-button-yellow-b:visited {
   color: #232373 !important;
-  background-color: #ffd252 !important;
-  border-color: #ffd252;
+  background-color: #FFD618 !important;
+  border-color: #FFD618;
 }
 
 a.default-button-yellow-b:active,
@@ -898,13 +898,22 @@ h5 {
   margin-bottom: 0 !important;
 }
 
+.content-styled span {
+  text-decoration: none;
+}
+
 .content-styled strong {
   font-weight: 600;
+}
+
+.content-styled p {
+  color: #263238;
 }
 
 .content-styled ol,
 .content-styled ul {
   font-weight: 400;
+  color: #263238;
 }
 
 .content-styled ul {
@@ -1441,7 +1450,7 @@ img.lazy-loaded {
   text-transform: uppercase;
   -webkit-appearance: none;
   color: #232373 !important;
-  background-color: #ffd252 !important;
+  background-color: #FFD618 !important;
 }
 
 .form-hold input[type=submit]:hover {
@@ -1782,7 +1791,7 @@ img.lazy-loaded {
     left: -5px;
     width: calc(100% + 10px);
     height: 11px;
-    background-color: #ffd252;
+    background-color: #FFD618;
     border-radius: 16px;
   }
   .as-h1 .underline-blue,
@@ -1830,10 +1839,6 @@ img.lazy-loaded {
     font-size: 22px;
     line-height: 30px;
     margin-bottom: 16px;
-  }
-  .as-h3.underline-column,
-  h3.underline-column {
-    margin-bottom: calc(16px * 2) !important;
   }
   .as-h4,
   h4 {
@@ -2095,8 +2100,8 @@ img.lazy-loaded {
   }
   h2 span.underline-yellow,
   h3 span.underline-yellow {
-    -webkit-text-decoration-color: #ffd252;
-    text-decoration-color: #ffd252;
+    -webkit-text-decoration-color: #FFD618;
+    text-decoration-color: #FFD618;
   }
   h2 span.underline-blue,
   h3 span.underline-blue {
@@ -2466,7 +2471,7 @@ img.lazy-loaded {
     margin: 64px 0 0;
   }
   .module-columns .module-column-box {
-    margin-bottom: calc(36px * 2);
+    margin-bottom: 36px;
   }
   .module-columns .module-column-box h1,
   .module-columns .module-column-box h2,
@@ -3734,7 +3739,7 @@ img.lazy-loaded {
     left: -5px;
     width: calc(100% + 10px);
     height: 16px;
-    background-color: #ffd252;
+    background-color: #FFD618;
     border-radius: 16px;
   }
   .as-h1 .underline-blue,
@@ -4032,8 +4037,8 @@ img.lazy-loaded {
   }
   h2 span.underline-yellow,
   h3 span.underline-yellow {
-    -webkit-text-decoration-color: #ffd252;
-    text-decoration-color: #ffd252;
+    -webkit-text-decoration-color: #FFD618;
+    text-decoration-color: #FFD618;
   }
   h2 span.underline-blue,
   h3 span.underline-blue {
@@ -4254,7 +4259,7 @@ img.lazy-loaded {
     display: none;
   }
   .header-offset-anchor {
-    position: absolute;
+    position: relative;
     display: block;
     top: -68px;
   }

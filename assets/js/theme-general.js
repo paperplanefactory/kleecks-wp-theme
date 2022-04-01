@@ -36,7 +36,7 @@ AOS.init({
 /////////////////////////////////////////////
 // Infinite scroll
 /////////////////////////////////////////////
-
+/*
 function initInfiniteScroll() {
   if (jQuery(".nav-next a")[0]) {
     jQuery('.grid-infinite').infiniteScroll({
@@ -64,7 +64,7 @@ function initInfiniteScroll() {
   }
 }
 initInfiniteScroll();
-
+*/
 /////////////////////////////////////////////
 // impaginazione forzata immagini e video in the_content()
 /////////////////////////////////////////////
@@ -134,9 +134,9 @@ function scrollDirectionMenu() {
   lastScrollTop = st;
 }
 
-jQuery(window).scroll(function(event) {
-  //scrollDirectionMenu();
-});
+//jQuery(window).scroll(function(event) {
+//scrollDirectionMenu();
+//});
 
 /////////////////////////////////////////////
 // Mega Menus
@@ -148,28 +148,18 @@ if (jQuery('.mega-menu-js')[0]) {
     jQuery('.mega-menu-js-trigger').removeClass('current-mega-menu');
   });
 
-
   jQuery('.mega-menu-js-trigger').click(function(e) {
-    //jQuery('.mega-menu-js').addClass('hidden');
-    //jQuery('.mega-menu-js-trigger').removeClass('current-mega-menu');
     var megamenu_open_id = jQuery(this).data('megamenu-open-id');
 
     if (jQuery(this).hasClass('current-mega-menu')) {
       jQuery(this).removeClass('current-mega-menu');
       jQuery(megamenu_open_id).addClass('hidden');
-
-      //alert('has');
     } else {
       jQuery('.mega-menu-js').addClass('hidden');
       jQuery('.mega-menu-js-trigger').removeClass('current-mega-menu');
       jQuery(this).addClass('current-mega-menu');
       jQuery(megamenu_open_id).removeClass('hidden');
-
-
-      //alert('has not');
     }
-    //jQuery('.mega-menu-js').addClass('hidden');
-    //jQuery('.mega-menu-js-trigger').removeClass('current-mega-menu');
 
     e.preventDefault();
   });
@@ -208,10 +198,14 @@ jQuery('.overlay-menu-mobile-js > .menu-item-has-children > a').click(function(e
 // slick slideshow
 /////////////////////////////////////////////
 
-jQuery('.features-mobile-slider-js, .slide-double-js, .slide-single-js, .logos-slideshow-extended-js, .logos-slideshow-compact-js, .feature-image-slider-js, .slide-case-study-js, .slide-comunicato-stampa-js, .slide-foto-js').on('init reInit', function(event, slick, currentSlide, nextSlide) {
+jQuery('.features-mobile-slider-js, .logos-slideshow-extended-js, .logos-slideshow-compact-js, .feature-image-slider-js, .slide-case-study-js, .slide-comunicato-stampa-js, .slide-foto-js').on('init reInit', function(event, slick, currentSlide, nextSlide) {
   AOS.refresh();
 });
 jQuery('.logos-slideshow-compact-js').slick({
+  speed: 9000,
+  autoplay: true,
+  autoplaySpeed: 0,
+  cssEase: 'linear',
   lazyLoad: 'progressive',
   dots: false,
   focusOnSelect: true,
@@ -222,8 +216,8 @@ jQuery('.logos-slideshow-compact-js').slick({
   slidesToShow: 4,
   slidesToScroll: 4,
   arrows: false,
-  autoplay: true,
-  autoplaySpeed: 2000,
+  pauseOnHover: true,
+  pauseOnFocus: true,
   responsive: [{
     breakpoint: 1024,
     settings: {
@@ -234,6 +228,10 @@ jQuery('.logos-slideshow-compact-js').slick({
 });
 
 jQuery('.logos-slideshow-extended-js').slick({
+  speed: 9000,
+  autoplay: true,
+  autoplaySpeed: 0,
+  cssEase: 'linear',
   lazyLoad: 'progressive',
   dots: false,
   focusOnSelect: true,
@@ -244,8 +242,8 @@ jQuery('.logos-slideshow-extended-js').slick({
   slidesToShow: 6,
   slidesToScroll: 6,
   arrows: false,
-  autoplay: true,
-  autoplaySpeed: 2000,
+  pauseOnHover: true,
+  pauseOnFocus: true,
   responsive: [{
     breakpoint: 1024,
     settings: {
@@ -301,36 +299,6 @@ jQuery('.slide-case-study-js, .slide-comunicato-stampa-js, .slide-foto-js').slic
     breakpoint: 1024,
     settings: {
       variableWidth: false,
-      slidesToShow: 1,
-      slidesToScroll: 1
-    }
-  }]
-});
-jQuery(document).on('keydown', function(e) {
-  if (e.keyCode == 37) {
-    jQuery('.slide-single-js').slick('slickPrev');
-  }
-  if (e.keyCode == 39) {
-    jQuery('.slide-single-js').slick('slickNext');
-  }
-});
-
-jQuery('.slide-single-js').slick({
-  lazyLoad: 'progressive',
-  dots: true,
-  focusOnSelect: true,
-  draggable: true,
-  infinite: false,
-  accessibility: true,
-  adaptiveHeight: false,
-  slidesToShow: 1,
-  slidesToScroll: 1,
-  arrows: true,
-  nextArrow: '<div class="slick-next">→</div>',
-  prevArrow: '<div class="slick-prev">←</div>',
-  responsive: [{
-    breakpoint: 1024,
-    settings: {
       slidesToShow: 1,
       slidesToScroll: 1
     }
@@ -505,13 +473,3 @@ jQuery('.click-hide').click(function(e) {
   jQuery(this).text(isVisible ? "+" : "-");
   e.preventDefault();
 });
-
-/////////////////////////////////////////////
-// preload
-/////////////////////////////////////////////
-
-function hidePreload() {
-  jQuery('.preload-container').addClass('hidden-preload');
-}
-
-//window.addEventListener('load', hidePreload);

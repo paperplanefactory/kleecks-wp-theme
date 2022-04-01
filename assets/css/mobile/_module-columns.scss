@@ -33,8 +33,9 @@
   }
 
   .module-column-box {
-    margin-bottom: calc(#{$flex-hold-column-wide-space-smartphone} * 2);
-    //margin-bottom: $flex-hold-column-wide-space-smartphone;
+    //margin-bottom: calc(#{$flex-hold-column-wide-space-smartphone} * 2);
+    margin-bottom: $flex-hold-column-wide-space-smartphone;
+
     h1,
     h2,
     h3,

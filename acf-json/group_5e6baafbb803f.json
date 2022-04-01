@@ -716,9 +716,9 @@
     "location": [
         [
             {
-                "param": "post_type",
+                "param": "page_template",
                 "operator": "==",
-                "value": "page"
+                "value": "default"
             }
         ],
         [
@@ -740,5 +740,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1648119844
+    "modified": 1648652008
 }

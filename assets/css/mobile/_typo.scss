@@ -91,7 +91,7 @@ h3 {
   margin-bottom: $h3-marginbottom-smartphone;
 
   &.underline-column {
-    margin-bottom: calc(#{$h3-marginbottom-smartphone} * 2) !important;
+    //margin-bottom: calc(#{$h3-marginbottom-smartphone} * 2) !important;
   }
 }
 
