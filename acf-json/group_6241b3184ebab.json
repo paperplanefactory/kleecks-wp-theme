@@ -1,0 +1,42 @@
+{
+    "key": "group_6241b3184ebab",
+    "title": "Styling voci menu hamburger mobile",
+    "fields": [
+        {
+            "key": "field_6241b31c13b17",
+            "label": "Styling voci menu hamburger mobile",
+            "name": "",
+            "type": "message",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "Ogni pagina genitore avrà in automatico l'icona per espandere le sottopagine.\r\nNelle sottopagine per inserire una voce di menu in verde bold utilizzare la classe “footer-as-h5.",
+            "new_lines": "wpautop",
+            "esc_html": 0
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "nav_menu_item",
+                "operator": "==",
+                "value": "location\/overlay-menu-mobile"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1648809009
+}

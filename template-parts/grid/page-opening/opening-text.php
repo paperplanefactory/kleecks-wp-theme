@@ -8,11 +8,22 @@
               <?php bcn_display(); ?>
             </div>
           <?php endif; ?>
-          <?php if ( get_field( 'page_opening_title' ) ) : ?>
-            <h1><?php the_field( 'page_opening_title' ); ?></h1>
-          <?php else : ?>
-            <h1><?php the_title(); ?></h1>
-          <?php endif; ?>
+          <div class="mobile-only">
+            <?php if ( get_field( 'page_opening_title_mobile' ) ) : ?>
+              <h1><?php the_field( 'page_opening_title_mobile' ); ?></h1>
+            <?php elseif ( get_field( 'page_opening_title' ) ) : ?>
+              <h1><?php the_field( 'page_opening_title' ); ?></h1>
+            <?php else : ?>
+              <h1><?php the_title(); ?></h1>
+            <?php endif; ?>
+          </div>
+          <div class="desktop-only">
+            <?php if ( get_field( 'page_opening_title' ) ) : ?>
+              <h1><?php the_field( 'page_opening_title' ); ?></h1>
+            <?php else : ?>
+              <h1><?php the_title(); ?></h1>
+            <?php endif; ?>
+          </div>
           <?php if ( get_field( 'page_opening_subtitle' ) ) : ?>
             <p><?php the_field( 'page_opening_subtitle' ); ?></p>
           <?php endif; ?>

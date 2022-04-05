@@ -228,7 +228,7 @@ jQuery('.logos-slideshow-compact-js').slick({
 });
 
 jQuery('.logos-slideshow-extended-js').slick({
-  speed: 9000,
+  speed: 14000,
   autoplay: true,
   autoplaySpeed: 0,
   cssEase: 'linear',
@@ -239,8 +239,8 @@ jQuery('.logos-slideshow-extended-js').slick({
   infinite: true,
   accessibility: true,
   adaptiveHeight: false,
-  slidesToShow: 6,
-  slidesToScroll: 6,
+  slidesToShow: 8,
+  slidesToScroll: 8,
   arrows: false,
   pauseOnHover: true,
   pauseOnFocus: true,

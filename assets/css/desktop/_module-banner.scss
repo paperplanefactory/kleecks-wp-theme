@@ -34,11 +34,12 @@
 
   .flex-hold-banner {
     .banner-texts {
-      width: 610px;
+      width: calc(100% - 220px);
+      padding-right: 20px;
     }
 
     .banner-cta {
-      width: calc(100% - 610px);
+      width: 220px;
       text-align: right;
     }
   }

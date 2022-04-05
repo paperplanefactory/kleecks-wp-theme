@@ -156,7 +156,7 @@
 
     .texts-area {
       position: relative;
-      max-width: 700px;
+      max-width: 900px;
       padding: 7vh 20px 7vh 0;
 
       h5 {
@@ -180,5 +180,15 @@
     display: block;
     width: 100%;
     height: 80px;
+  }
+}
+
+.flex-hold-opening-kleecks {
+  .flex-hold-opening-kleecks-texts {
+    width: 60%;
+  }
+
+  .flex-hold-opening-kleecks-image {
+    width: 40%;
   }
 }

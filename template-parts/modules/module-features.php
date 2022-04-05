@@ -24,6 +24,14 @@ if( $module_features_choose_features ) : foreach( $module_features_choose_featur
             ?>
             <div class="feature-slide">
               <div class="activator feature-activator-mobile-js" data-feature-mobile-number="<?php echo $feature_counter; ?>"></div>
+              <div class="feature-texts active feature-texts-js-<?php echo $feature_counter; ?>">
+                <h2 class="txt-8"><span class="activator-status activator-status-js-<?php echo $feature_counter; ?>"><?php echo $activator_status_value; ?></span> <?php the_sub_field( 'feature_title' ); ?></h2>
+                <div class="feature-text last-child-no-margin txt-1 feature-content-js-<?php echo $feature_counter; ?>">
+                  <p>
+                    <?php the_sub_field( 'feature_description' ); ?>
+                  </p>
+                </div>
+              </div>
               <div class="feature-image">
                 <?php
                 $image_data = array(
@@ -40,14 +48,6 @@ if( $module_features_choose_features ) : foreach( $module_features_choose_featur
                 );
                 print_theme_image_lazyslick( $image_data, $image_sizes );
                 ?>
-              </div>
-              <div class="feature-texts active feature-texts-js-<?php echo $feature_counter; ?>">
-                <h2 class="txt-8"><span class="activator-status activator-status-js-<?php echo $feature_counter; ?>"><?php echo $activator_status_value; ?></span> <?php the_sub_field( 'feature_title' ); ?></h2>
-                <div class="feature-text last-child-no-margin txt-1 feature-content-js-<?php echo $feature_counter; ?>">
-                  <p>
-                    <?php the_sub_field( 'feature_description' ); ?>
-                  </p>
-                </div>
               </div>
             </div>
             <?php endwhile; ?>

@@ -1,0 +1,70 @@
+{
+    "key": "group_6241acf3b476e",
+    "title": "Styling voci menu colonne footer",
+    "fields": [
+        {
+            "key": "field_6241ad1fd82e7",
+            "label": "Styling voci menu colonne footer",
+            "name": "",
+            "type": "message",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "Per inserire la prima voce di menu (bold e con un font più grande) utilizzare la classe \"footer-as-h4\".\r\nPer inserire una voce di menu in verde bold utilizzare la classe \"footer-as-h5\".\r\nPer inserire una CTA nelle voci di menu utilizzare la classe \"cta-navi\".",
+            "new_lines": "wpautop",
+            "esc_html": 0
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "nav_menu_item",
+                "operator": "==",
+                "value": "location\/footer-menu-1"
+            }
+        ],
+        [
+            {
+                "param": "nav_menu_item",
+                "operator": "==",
+                "value": "location\/footer-menu-2"
+            }
+        ],
+        [
+            {
+                "param": "nav_menu_item",
+                "operator": "==",
+                "value": "location\/footer-menu-3"
+            }
+        ],
+        [
+            {
+                "param": "nav_menu_item",
+                "operator": "==",
+                "value": "location\/footer-menu-4"
+            }
+        ],
+        [
+            {
+                "param": "nav_menu_item",
+                "operator": "==",
+                "value": "location\/footer-menu-1-mobile"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1648809009
+}

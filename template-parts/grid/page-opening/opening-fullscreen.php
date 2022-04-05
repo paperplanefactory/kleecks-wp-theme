@@ -1,6 +1,17 @@
-<div class="wrapper page-opening">
-  <?php if ( $thumb_id != '' ) : ?>
-    <div class="<?php echo $page_opening_layout_size; ?> fullscreen-cta fullscreen-cta-center lazy coverize" data-bg="<?php echo $thumb_url_desktop[0]; ?>" data-bg-hidpi="<?php echo $thumb_url_desktop_hd[0]; ?>" data-aos="fade">
+<?php
+if ( $opening_fullscreen_image != '' || $page_opening_video === 'si' ) {
+  $box_colors_scheme_classes = 'bg-1 txt-4';
+  $box_h1_color = 'txt-4';
+}
+else {
+  $box_colors_scheme_classes = 'bg-4 txt-1';
+  $box_h1_color = 'txt-8';
+}
+ ?>
+
+<div class="wrapper page-opening <?php echo $box_colors_scheme_classes; ?>">
+  <?php if ( $opening_fullscreen_image != '' ) : ?>
+    <div class="<?php echo $page_opening_layout_size; ?> fullscreen-cta fullscreen-cta-center lazy coverize" data-bg="<?php echo $thumb_url_desktop; ?>" data-bg-hidpi="<?php echo $thumb_url_desktop_hd; ?>" data-aos="fade">
   <?php else : ?>
     <div class="<?php echo $page_opening_layout_size; ?> fullscreen-cta fullscreen-cta-center">
   <?php endif; ?>
@@ -11,26 +22,44 @@
        </video>
      </div>
      <?php endif; ?>
-     <div class="above-image-opacity"></div>
+     <?php if ( $opening_fullscreen_image != '' || $page_opening_video === 'si' ) : ?>
+       <div class="above-image-opacity"></div>
+     <?php endif; ?>
+
       <div class="fullscreen-cta-aligner">
         <div class="wrapper">
           <div class="wrapper-padded">
             <div class="wrapper-padded-container">
-              <div class="fullscreen-cta-safe-padding alignleft txt-4 default-button-default-colors" data-aos="fade-in">
+              <div class="fullscreen-cta-safe-padding alignleft default-button-default-colors" data-aos="fade-in">
                 <div class="last-child-no-margin">
                   <?php if ( $page_breadcrumbs === 'yes' && function_exists( 'bcn_display' ) ) : ?>
                     <div class="breadcrumbs-holder undelinked-links" typeof="BreadcrumbList" vocab="http://schema.org/">
                       <?php bcn_display(); ?>
                     </div>
                   <?php endif; ?>
-                  <?php if ( get_field( 'page_opening_title' ) ) : ?>
-                    <h1><?php the_field( 'page_opening_title' ); ?></h1>
-                  <?php else : ?>
-                    <h1><?php the_title(); ?></h1>
-                  <?php endif; ?>
-                  <?php if ( get_field( 'page_opening_subtitle' ) ) : ?>
-                    <p><?php the_field( 'page_opening_subtitle' ); ?></p>
-                  <?php endif; ?>
+                  <div class="mobile-only">
+                    <?php if ( get_field( 'page_opening_title_mobile' ) ) : ?>
+                      <h1 class="<?php echo $box_h1_color; ?>"><?php the_field( 'page_opening_title_mobile' ); ?></h1>
+                    <?php elseif ( get_field( 'page_opening_title' ) ) : ?>
+                      <h1 class="<?php echo $box_h1_color; ?>"><?php the_field( 'page_opening_title' ); ?></h1>
+                    <?php else : ?>
+                      <h1 class="<?php echo $box_h1_color; ?>"><?php the_title(); ?></h1>
+                    <?php endif; ?>
+                    <?php if ( get_field( 'page_opening_subtitle' ) ) : ?>
+                      <p><?php the_field( 'page_opening_subtitle' ); ?></p>
+                    <?php endif; ?>
+                  </div>
+                  <div class="desktop-only">
+                    <?php if ( get_field( 'page_opening_title' ) ) : ?>
+                      <h1 class="<?php echo $box_h1_color; ?>"><?php the_field( 'page_opening_title' ); ?></h1>
+                    <?php else : ?>
+                      <h1 class="<?php echo $box_h1_color; ?>"><?php the_title(); ?></h1>
+                    <?php endif; ?>
+                    <?php if ( get_field( 'page_opening_subtitle' ) ) : ?>
+                      <p><?php the_field( 'page_opening_subtitle' ); ?></p>
+                    <?php endif; ?>
+                  </div>
+
                 </div>
                 <div class="clearer"></div>
                 <?php get_template_part( 'template-parts/grid/page-opening/opening-cta-default' ); ?>

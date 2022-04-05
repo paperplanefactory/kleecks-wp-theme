@@ -61,7 +61,6 @@
 
     .feature-image {
       width: 100%;
-      margin-bottom: 10px;
     }
 
     .feature-texts {
@@ -69,6 +68,7 @@
       width: 100%;
       border: solid 1px $color-2;
       padding: 25px 15px;
+      margin-bottom: 10px;
 
       &:before {
         content: "";

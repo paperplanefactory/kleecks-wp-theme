@@ -41,11 +41,11 @@
     &.stripe-image-text,
     &.stripe-text-image {
       .module-stripe-image {
-        order: 1;
+        order: 2;
       }
 
       .module-stripe-text {
-        order: 2;
+        order: 1;
 
         .spacer {
           padding: 20px 0;

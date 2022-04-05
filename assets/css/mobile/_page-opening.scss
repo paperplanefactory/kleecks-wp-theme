@@ -181,11 +181,21 @@
     background-position: right 50%;
     background-repeat: no-repeat;
     background-size: auto 100%;
-    margin: 0 0 0 0 !important;
+    margin: 3.5vh 0 0 0 !important;
     padding: 3.5vh 0;
   }
 
   .after-title-arrows-area-bottom {
+    display: none;
+  }
+}
+
+.flex-hold-opening-kleecks {
+  .flex-hold-opening-kleecks-texts {
+    width: 100%;
+  }
+
+  .flex-hold-opening-kleecks-image {
     display: none;
   }
 }

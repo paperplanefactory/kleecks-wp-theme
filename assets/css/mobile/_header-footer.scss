@@ -87,7 +87,7 @@ $hamburger-width: 55px; // header
 #head-overlay {
   top: $header-smartphone-height;
   width: 100%;
-  height: calc(100vh - #{$header-smartphone-height});
+  //height: calc(100vh - #{$header-smartphone-height});
   height: calc((var(--vh, 1vh) * 100) - #{$header-smartphone-height});
   background-color: $color-8;
 
@@ -219,8 +219,8 @@ $hamburger-width: 55px; // header
 
 .scroll-opportunity {
   width: 100%;
-  height: calc(100vh - #{$header-smartphone-height});
-  padding-bottom: 54px;
+  height: calc((var(--vh, 1vh) * 100) - #{$header-smartphone-height});
+  //padding-bottom: 54px;
 }
 // footer
 
@@ -236,20 +236,44 @@ $hamburger-width: 55px; // header
   .footer-menu-top {
     position: relative;
     width: 100%;
-    @include flex-wrap;
-
+    //@include flex-wrap;
     li {
-      &:nth-child(1) {
-        width: 100px;
-        font-size: $h2-size-smartphone;
-        line-height: $h2-lineheight-smartphone;
+      display: block;
+      width: 100%;
+      margin-bottom: 20px;
+
+      &.footer-as-h4 {
+        font-size: $h4-size-smartphone;
+        line-height: $h4-lineheight-smartphone;
         font-weight: $font-weight-4;
+        margin-top: 30px;
         text-transform: uppercase;
+        pointer-events: none;
+
+        &:first-child {
+          margin-top: 0;
+        }
+
+        a {
+          color: $color-4;
+        }
       }
 
-      &:nth-child(2) {
-        width: calc(100% - 100px);
-        text-align: right;
+      &.footer-as-h5 {
+        font-size: $h5-size-smartphone;
+        line-height: $h5-lineheight-smartphone;
+        font-weight: $font-weight-4;
+        margin-top: 30px;
+        text-transform: uppercase;
+        pointer-events: none;
+
+        &:first-child {
+          margin-top: 0;
+        }
+
+        a {
+          color: $color-6;
+        }
       }
     }
   }

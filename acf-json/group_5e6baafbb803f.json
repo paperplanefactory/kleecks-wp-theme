@@ -54,6 +54,38 @@
             "placeholder": ""
         },
         {
+            "key": "field_6246f7df573ed",
+            "label": "Immagine di apertura (fullscreen)",
+            "name": "opening_fullscreen_image",
+            "type": "image",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5e6bad4b7f721",
+                        "operator": "==",
+                        "value": "opening-fullscreen"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "preview_size": "medium",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": ""
+        },
+        {
             "key": "field_5e6bb7588c93b",
             "label": "Video",
             "name": "page_opening_video",
@@ -126,6 +158,25 @@
             "name": "page_opening_title",
             "type": "textarea",
             "instructions": "Se non questo campo non viene compilato verrà usato il titolo predefinito della pagina.<br \/>\r\n<strong>Sottolineatura gialla:<\/strong><br \/>\r\n&lt;span class=\"underline-yellow\"&gt;Parole sottolineate&lt;\/span&gt;<br \/>\r\n<strong>Sottolineatura verde:<\/strong><br \/>\r\n&lt;span class=\"underline-green\"&gt;Parole sottolineate&lt;\/span&gt;<br \/>\r\n<strong>Sottolineatura blu:<\/strong><br \/>\r\n&lt;span class=\"underline-blue\"&gt;Parole sottolineate&lt;\/span&gt;<br \/>\r\n<strong>Sottolineatura rossa:<\/strong><br \/>\r\n&lt;span class=\"underline-red\"&gt;Parole sottolineate&lt;\/span&gt;<br \/>",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "rows": "",
+            "new_lines": "br"
+        },
+        {
+            "key": "field_6246eda9ac565",
+            "label": "Titolo (mobile)",
+            "name": "page_opening_title_mobile",
+            "type": "textarea",
+            "instructions": "Se non questo campo non viene compilato verrà usato il titolo predefinito della pagina o, se definito, il titolo desktop.<br \/>\r\n<strong>Sottolineatura gialla:<\/strong><br \/>\r\n&lt;span class=\"underline-yellow\"&gt;Parole sottolineate&lt;\/span&gt;<br \/>\r\n<strong>Sottolineatura verde:<\/strong><br \/>\r\n&lt;span class=\"underline-green\"&gt;Parole sottolineate&lt;\/span&gt;<br \/>\r\n<strong>Sottolineatura blu:<\/strong><br \/>\r\n&lt;span class=\"underline-blue\"&gt;Parole sottolineate&lt;\/span&gt;<br \/>\r\n<strong>Sottolineatura rossa:<\/strong><br \/>\r\n&lt;span class=\"underline-red\"&gt;Parole sottolineate&lt;\/span&gt;<br \/>",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -740,5 +791,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1648652008
+    "modified": 1648818303
 }

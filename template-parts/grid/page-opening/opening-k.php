@@ -15,8 +15,8 @@ else {
 <div class="wrapper opening-kleecks">
   <div class="wrapper-padded">
     <div class="wrapper-padded-container-">
-      <div class="flex-hold flex-hold-2 margins-fit verticalize">
-        <div class="flex-hold-child">
+      <div class="flex-hold flex-hold-opening-kleecks verticalize">
+        <div class="flex-hold-opening-kleecks-texts">
           <div class="texts-area txt-8 default-button-default-colors" data-aos="fade-left">
             <div class="title-arrows-area-top <?php echo $page_opening_arrow_top_left_class; ?> <?php echo $page_opening_arrow_top_right_class; ?>">
               <?php if ( get_field( 'page_opening_arrow_top_left' ) ) : ?>
@@ -35,11 +35,22 @@ else {
                 <?php bcn_display(); ?>
               </div>
             <?php endif; ?>
-            <?php if ( get_field( 'page_opening_title' ) ) : ?>
-              <h1><?php the_field( 'page_opening_title' ); ?></h1>
-            <?php else : ?>
-              <h1><?php the_title(); ?></h1>
-            <?php endif; ?>
+            <div class="mobile-only">
+              <?php if ( get_field( 'page_opening_title_mobile' ) ) : ?>
+                <h1><?php the_field( 'page_opening_title_mobile' ); ?></h1>
+              <?php elseif ( get_field( 'page_opening_title' ) ) : ?>
+                <h1><?php the_field( 'page_opening_title' ); ?></h1>
+              <?php else : ?>
+                <h1><?php the_title(); ?></h1>
+              <?php endif; ?>
+            </div>
+            <div class="desktop-only">
+              <?php if ( get_field( 'page_opening_title' ) ) : ?>
+                <h1><?php the_field( 'page_opening_title' ); ?></h1>
+              <?php else : ?>
+                <h1><?php the_title(); ?></h1>
+              <?php endif; ?>
+            </div>
             <?php if ( get_field( 'page_opening_arrow_bottom_right' ) ) : ?>
               <div class="title-arrows-area-bottom">
                 <div class="title-arrow-bottom-right" data-aos="fade-in" data-aos-delay="900">
@@ -71,7 +82,7 @@ else {
             <?php endif; ?>
           </div>
         </div>
-        <div class="flex-hold-child desktop-only" data-aos="fade-right" data-aos-delay="200">
+        <div class="flex-hold-opening-kleecks-image" data-aos="fade-right" data-aos-delay="200">
           <?php
           $image_data = array(
               'image_type' => 'acf_field', // options: post_thumbnail, acf_field, acf_sub_field
