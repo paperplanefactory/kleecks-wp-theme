@@ -1,12 +1,14 @@
 <?php
 if ( $opening_fullscreen_image != '' || $page_opening_video === 'si' ) {
-  $box_colors_scheme_classes = 'bg-1 txt-4';
-  $box_h1_color = 'txt-4';
+  //$box_colors_scheme_classes = 'bg-1 txt-4';
+  //$box_h1_color = 'txt-4';
+  //$page_opening_opacity_level = get_field( 'page_opening_opacity_level' );
 }
 else {
-  $box_colors_scheme_classes = 'bg-4 txt-1';
-  $box_h1_color = 'txt-8';
+  //$box_colors_scheme_classes = get_field( 'page_opening_color_scheme' );
+  //$box_h1_color = 'txt-8';
 }
+$box_colors_scheme_classes = get_field( 'page_opening_color_scheme' );
  ?>
 
 <div class="wrapper page-opening <?php echo $box_colors_scheme_classes; ?>">
@@ -22,7 +24,7 @@ else {
        </video>
      </div>
      <?php endif; ?>
-     <?php if ( $opening_fullscreen_image != '' || $page_opening_video === 'si' ) : ?>
+     <?php if ( $page_opening_opacity_level === 'si' && ( $opening_fullscreen_image != '' || $page_opening_video === 'si' ) ) : ?>
        <div class="above-image-opacity"></div>
      <?php endif; ?>
 
@@ -39,11 +41,11 @@ else {
                   <?php endif; ?>
                   <div class="mobile-only">
                     <?php if ( get_field( 'page_opening_title_mobile' ) ) : ?>
-                      <h1 class="<?php echo $box_h1_color; ?>"><?php the_field( 'page_opening_title_mobile' ); ?></h1>
+                      <h1 class=""><?php the_field( 'page_opening_title_mobile' ); ?></h1>
                     <?php elseif ( get_field( 'page_opening_title' ) ) : ?>
-                      <h1 class="<?php echo $box_h1_color; ?>"><?php the_field( 'page_opening_title' ); ?></h1>
+                      <h1 class=""><?php the_field( 'page_opening_title' ); ?></h1>
                     <?php else : ?>
-                      <h1 class="<?php echo $box_h1_color; ?>"><?php the_title(); ?></h1>
+                      <h1 class=""><?php the_title(); ?></h1>
                     <?php endif; ?>
                     <?php if ( get_field( 'page_opening_subtitle' ) ) : ?>
                       <p><?php the_field( 'page_opening_subtitle' ); ?></p>

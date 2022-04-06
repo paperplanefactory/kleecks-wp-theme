@@ -48,7 +48,7 @@ $module_columns_fix_fix_column_image_format = get_sub_field( 'module_columns_fix
       <div class="wrapper-padded-container">
         <div class="flex-hold flex-fix-column <?php the_sub_field( 'module_columns_fix_side' ); ?> module-column-box">
           <div class="fix">
-            <div class="sticky-element">
+            <div class="sticky-element txt-1">
               <div class="<?php the_sub_field( 'module_columns_fix_fix_column_align' ); ?>">
                 <?php if ( $module_columns_fix_fix_column_image != '' ) : ?>
                   <div class="column-image">
@@ -131,7 +131,7 @@ $module_columns_fix_fix_column_image_format = get_sub_field( 'module_columns_fix
               $module_columns_fix_repeater_image_format = get_sub_field( 'module_columns_fix_repeater_image_format' );
 
               ?>
-              <div class="flex-hold-child module-column-box">
+              <div class="flex-hold-child module-column-box txt-1">
                 <div class="<?php the_sub_field( 'module_columns_fix_repeater_align' ); ?>">
                   <?php if ( $module_columns_fix_repeater_image != '' ) : ?>
                     <div class="column-image">

@@ -89,5 +89,12 @@
 @import 'global/cookies';
 @import 'global/admin-bar';
 @import 'global/mixin';
-@import 'global/modals'; //@import 'global/preload-animations';
+@import 'global/modals';
+@media not all and (min-resolution:.001dpcm) {
+  .opening-kleecks,
+  .opening-module-kleecks {
+    background-attachment: scroll !important;
+  }
+}
+//@import 'global/preload-animations';
 // @import 'global/visual-debug';

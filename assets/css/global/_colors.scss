@@ -329,3 +329,143 @@ a.default-button-yellow-b:hover {
 	background: $color-5;
 	color: $color-4;
 }
+
+.opening-scheme-1 {
+	background-color: $color-4;
+	color: $color-8;
+
+	h1 {
+		color: $color-8;
+	}
+
+	a.default-button-b:link,
+	a.default-button-b:visited {
+		color: $color-8;
+
+		&:before {
+			background-color: $color-8;
+		}
+	}
+
+	a.default-button:link,
+	a.default-button:visited {
+		color: $color-8 !important;
+		background-color: $color-7 !important;
+		border-color: $color-7;
+	}
+
+	a.default-button:active,
+	a.default-button:hover {
+		color: $color-4 !important;
+		background-color: $color-8 !important;
+		border-color: $color-8;
+	}
+}
+
+.opening-scheme-2 {
+	background-color: $color-8;
+	color: $color-4;
+
+	h1 {
+		color: $color-4;
+	}
+
+	a {
+		color: $color-4;
+	}
+
+	a.default-button-b:link,
+	a.default-button-b:visited {
+		color: $color-7;
+
+		&:before {
+			background-color: $color-7;
+		}
+	}
+
+	a.default-button:link,
+	a.default-button:visited {
+		color: $color-8 !important;
+		background-color: $color-7 !important;
+		border-color: $color-7;
+	}
+
+	a.default-button:active,
+	a.default-button:hover {
+		color: $color-4 !important;
+		background-color: $color-5 !important;
+		border-color: $color-5;
+	}
+}
+
+.opening-scheme-3 {
+	background-color: $color-7;
+	color: $color-1;
+
+	h1 {
+		color: $color-8;
+	}
+
+	a {
+		color: $color-1;
+	}
+
+	a.default-button-b:link,
+	a.default-button-b:visited {
+		color: $color-8;
+
+		&:before {
+			background-color: $color-8;
+		}
+	}
+
+	a.default-button:link,
+	a.default-button:visited {
+		color: $color-4 !important;
+		background-color: $color-8 !important;
+		border-color: $color-8;
+	}
+
+	a.default-button:active,
+	a.default-button:hover {
+		color: $color-4 !important;
+		background-color: $color-5 !important;
+		border-color: $color-5;
+	}
+}
+
+.opening-scheme-4 {
+	background-color: $color-6;
+	color: $color-1;
+
+	h1 {
+		color: $color-1;
+	}
+
+	a {
+		color: $color-1;
+	}
+
+	a.default-button-b:link,
+	a.default-button-b:visited {
+		color: $color-8;
+
+		&:before {
+			background-color: $color-8;
+		}
+	}
+
+	a.default-button:link,
+	a.default-button:visited {
+		color: $color-4 !important;
+		background-color: $color-8 !important;
+		border-color: $color-8;
+	}
+
+	a.default-button:active,
+	a.default-button:hover {
+		color: $color-8 !important;
+		background-color: $color-7 !important;
+		border-color: $color-7;
+	}
+}

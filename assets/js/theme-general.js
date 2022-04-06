@@ -299,8 +299,7 @@ jQuery('.slide-case-study-js, .slide-comunicato-stampa-js, .slide-foto-js').slic
     breakpoint: 1024,
     settings: {
       variableWidth: false,
-      slidesToShow: 1,
-      slidesToScroll: 1
+      verticalSwiping: false
     }
   }]
 });

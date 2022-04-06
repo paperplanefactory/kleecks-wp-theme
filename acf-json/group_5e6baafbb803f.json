@@ -17,7 +17,7 @@
             },
             "choices": {
                 "opening-k": "Opening Kleecks",
-                "opening-fullscreen": "Immagine fullscreen",
+                "opening-fullscreen": "Fullscreen (con o senza immagine di sfondo)",
                 "opening-text": "Solo testo"
             },
             "default_value": false,
@@ -84,6 +84,78 @@
             "max_height": "",
             "max_size": "",
             "mime_types": ""
+        },
+        {
+            "key": "field_624c49c088837",
+            "label": "Mostrare livello di opacità sopra l'immagine",
+            "name": "page_opening_opacity_level",
+            "type": "select",
+            "instructions": "Viene applicato solo se è presente una immagine di sfondo",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5e6bad4b7f721",
+                        "operator": "==",
+                        "value": "opening-fullscreen"
+                    },
+                    {
+                        "field": "field_6246f7df573ed",
+                        "operator": "!=empty"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "no": "No",
+                "si": "Sì"
+            },
+            "default_value": false,
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 0,
+            "return_format": "value",
+            "ajax": 0,
+            "placeholder": ""
+        },
+        {
+            "key": "field_624c40ff6d348",
+            "label": "Schema colori",
+            "name": "page_opening_color_scheme",
+            "type": "select",
+            "instructions": "Viene applicato solo se non è presente una immagine di sfondo",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5e6bad4b7f721",
+                        "operator": "==",
+                        "value": "opening-fullscreen"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "opening-scheme-1": "Sfondo bianco - testo \/ link blu scuro",
+                "opening-scheme-2": "Sfondo blu scuro - testo bianco \/ link gialli",
+                "opening-scheme-3": "Sfondo giallo - testo grigio scuro \/ link blu scuro",
+                "opening-scheme-4": "Sfondo verde  - testo grigio scuro \/ link blu scuro"
+            },
+            "default_value": false,
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 0,
+            "return_format": "value",
+            "ajax": 0,
+            "placeholder": ""
         },
         {
             "key": "field_5e6bb7588c93b",
@@ -791,5 +863,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1648818303
+    "modified": 1649174067
 }

@@ -30,9 +30,9 @@
   .opening-module-kleecks {
     min-height: calc(100vh - #{$header-desktop-height});
     background-image: url("assets/images/module-k.svg");
+    background-size: auto 100%;
     background-position: 0 50%;
     background-repeat: no-repeat;
-    background-size: auto 100%;
     background-attachment: fixed;
 
     .flex-hold-kleecks-block {

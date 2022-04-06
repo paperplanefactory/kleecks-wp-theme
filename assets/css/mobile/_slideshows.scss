@@ -2,6 +2,11 @@
 @import '../global/vars';
 @import '../global/mixin';
 
+.slick-slider {
+  touch-action: auto;
+  -ms-touch-action: auto;
+}
+
 .logos-slideshow {
   margin-top: 10px;
 

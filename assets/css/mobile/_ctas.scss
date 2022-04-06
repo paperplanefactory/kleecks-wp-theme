@@ -12,7 +12,7 @@
 
 .default-button-b {
 	&:after {
-		font-size: calc(#{$cta1-size-smartphone} + 5px);
-		line-height: calc(#{$cta1-lineheight-smartphone} + 5px);
+		font-size: calc(#{$cta1-size-smartphone} + 1px);
+		line-height: calc(#{$cta1-lineheight-smartphone} + 1px);
 	}
 }
