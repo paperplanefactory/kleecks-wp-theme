@@ -203,7 +203,9 @@ $module_columns_fix_fix_column_image_format = get_sub_field( 'module_columns_fix
 
           </div>
         </div>
-        <?php get_template_part( 'template-parts/modules/module-cta-default' ); ?>
+        <div class="txt-1">
+          <?php get_template_part( 'template-parts/modules/module-cta-default' ); ?>
+        </div>
       </div>
     </div>
   </div>

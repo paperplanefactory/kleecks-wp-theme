@@ -2195,7 +2195,7 @@ img.lazy-loaded {
   .title-arrows-area-bottom .title-arrow-bottom-right {
     height: 110px;
     width: 160px;
-    top: 0;
+    top: -10px;
     right: 40px;
     background-image: url("assets/images/arrow-bottom-right.svg");
     background-position: calc(50% + 20px) 0;
@@ -3138,6 +3138,9 @@ img.lazy-loaded {
   }
   .module-kleecks .module-no-paddings-bottom {
     padding-bottom: 0;
+  }
+  .module-kleecks .opening-module-kleecks .title-arrow-bottom-right {
+    right: 20px;
   }
   .module-kleecks .opening-module-kleecks .flex-hold-kleecks-block .space-child {
     display: none;

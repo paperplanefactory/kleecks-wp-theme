@@ -28,7 +28,21 @@
   }
 
   .opening-module-kleecks {
+    //background-image: url("assets/images/opening-k.svg");
+    //background-size: auto 100%;
+    //background-position: calc(100% + 40px) 50%;
+    //background-position: right 50%;
+    //background-repeat: no-repeat;
+    //background-attachment: fixed;
     //min-height: calc(100vh - #{$header-smartphone-height});
+    .title-arrow-top-right {
+      //right: 40px;
+    }
+
+    .title-arrow-bottom-right {
+      right: 20px;
+    }
+
     .flex-hold-kleecks-block {
       //min-height: calc(100vh - #{$header-smartphone-height});
       .space-child {

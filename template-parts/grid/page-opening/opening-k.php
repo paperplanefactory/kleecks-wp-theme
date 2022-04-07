@@ -100,12 +100,20 @@ else {
           ?>
         </div>
       </div>
-      <?php if ( get_field( 'opening_kleecks_image_mobile' ) ) : ?>
+      <?php
+      if ( get_field( 'opening_kleecks_image_mobile' ) || get_field( 'opening_kleecks_image_desktop' ) ) :
+        if ( get_field( 'opening_kleecks_image_mobile' ) ) {
+          $set_image = 'opening_kleecks_image_mobile';
+        }
+        else {
+          $set_image = 'opening_kleecks_image_desktop';
+        }
+        ?>
         <div class="mobile-only mobile-image" data-aos="fade-right" data-aos-delay="200">
           <?php
           $image_data = array(
               'image_type' => 'acf_field', // options: post_thumbnail, acf_field, acf_sub_field
-              'image_value' => 'opening_kleecks_image_mobile', // se utilizzi un custom field indica qui il nome del campo
+              'image_value' => $set_image, // se utilizzi un custom field indica qui il nome del campo
               'size_fallback' => 'column'
           );
           $image_sizes = array( // qui sono definiti i ritagli o dimensioni. Devono corrispondere per numero a quanto dedinfito nella funzione nei parametri data-srcset o srcset

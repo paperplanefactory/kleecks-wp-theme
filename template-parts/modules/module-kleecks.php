@@ -10,18 +10,20 @@
         <div class="space-child"></div>
         <div class="content-child">
           <div class="texts-area txt-8 default-button-default-colors" data-aos="fade-left">
-            <div class="title-arrows-area-top <?php echo $page_opening_arrow_top_left_class; ?> <?php echo $page_opening_arrow_top_right_class; ?>">
-              <?php if ( get_field( 'page_opening_arrow_top_left' ) ) : ?>
-                <div class="title-arrow-top-left" data-aos="fade-in" data-aos-delay="500">
-                  <span class="text-handwritten txt-5"><?php the_field( 'page_opening_arrow_top_left' ); ?></span>
-                </div>
-              <?php endif; ?>
-              <?php if ( get_field( 'page_opening_arrow_top_right' ) ) : ?>
-                <div class="title-arrow-top-right" data-aos="fade-in" data-aos-delay="700">
-                  <span class="text-handwritten txt-5"><?php the_field( 'page_opening_arrow_top_right' ); ?></span>
-                </div>
-              <?php endif; ?>
-            </div>
+            <?php if ( get_field( 'page_opening_arrow_top_left' ) || get_field( 'page_opening_arrow_top_right' ) ) : ?>
+              <div class="title-arrows-area-top <?php echo $page_opening_arrow_top_left_class; ?> <?php echo $page_opening_arrow_top_right_class; ?>">
+                <?php if ( get_field( 'page_opening_arrow_top_left' ) ) : ?>
+                  <div class="title-arrow-top-left" data-aos="fade-in" data-aos-delay="500">
+                    <span class="text-handwritten txt-5"><?php the_field( 'page_opening_arrow_top_left' ); ?></span>
+                  </div>
+                <?php endif; ?>
+                <?php if ( get_field( 'page_opening_arrow_top_right' ) ) : ?>
+                  <div class="title-arrow-top-right" data-aos="fade-in" data-aos-delay="700">
+                    <span class="text-handwritten txt-5"><?php the_field( 'page_opening_arrow_top_right' ); ?></span>
+                  </div>
+                <?php endif; ?>
+              </div>
+            <?php endif; ?>
             <?php if ( $page_breadcrumbs === 'yes' && function_exists( 'bcn_display' ) ) : ?>
               <div class="breadcrumbs-holder undelinked-links" typeof="BreadcrumbList" vocab="http://schema.org/">
                 <?php bcn_display(); ?>
