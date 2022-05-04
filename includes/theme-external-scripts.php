@@ -17,14 +17,20 @@ if ( $theme_external_scripts == 1 ) {
       var theme_body_script = decodeURIComponent("<?php echo rawurlencode( $theme_body_script ); ?>");
       var theme_after_body_script = decodeURIComponent("<?php echo rawurlencode( $theme_after_body_script ); ?>");
       function add_theme_external_scripts() {
-        jQuery('head').append(theme_head_script);
-    		jQuery('body').prepend(theme_body_script);
-    		jQuery('body').append(theme_after_body_script);
+        if(theme_head_script != ''){
+          jQuery('head').append(theme_head_script);
+        };
+        if(theme_body_script != ''){
+          jQuery('body').append(theme_body_script);
+        };
+        if(theme_after_body_script != ''){
+          jQuery('body').append(theme_after_body_script);
+        };
       }
       add_theme_external_scripts();
       </script>
     <?php
   }
 
-  add_action( 'wp_footer', 'theme_handle_external_scripts', 9999);
+  add_action( 'wp_footer', 'theme_handle_external_scripts', 1);
 }

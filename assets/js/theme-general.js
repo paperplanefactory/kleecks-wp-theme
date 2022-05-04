@@ -376,7 +376,7 @@ jQuery('.feature-activator-js').click(function(e) {
 /////////////////////////////////////////////
 // features mobile
 /////////////////////////////////////////////
-
+/*
 jQuery('.feature-activator-mobile-js').click(function(e) {
   //jQuery('.feature-text').slideUp(300);
   //jQuery('.feature-texts').removeClass('active-feature');
@@ -392,7 +392,7 @@ jQuery('.feature-activator-mobile-js').click(function(e) {
 
   e.preventDefault();
 });
-
+*/
 /////////////////////////////////////////////
 // Modals
 /////////////////////////////////////////////
