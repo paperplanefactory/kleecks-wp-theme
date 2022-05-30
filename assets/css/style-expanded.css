@@ -1132,6 +1132,11 @@ h5 {
   margin: 0 auto;
 }
 
+.iframe-embed iframe {
+  width: 100vw;
+  height: 100vh;
+}
+
 .flex-hold {
   position: relative;
   width: 100%;
