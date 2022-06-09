@@ -85,7 +85,7 @@ html {
 }
 
 body {
-  font-family: "Inter", sans-serif;
+  font-family: "Rubik", sans-serif;
   line-height: 1;
   overflow: overlay !important;
   scrollbar-gutter: auto;
@@ -311,7 +311,7 @@ textarea {
 }
 
 #infscr-loading p {
-  font-family: "Inter", sans-serif;
+  font-family: "Rubik", sans-serif;
   font-size: 15px;
   line-height: 24px;
   color: #FFFFFF;
@@ -962,7 +962,7 @@ h4,
 h5,
 h6,
 p {
-  font-family: "Inter", sans-serif;
+  font-family: "Rubik", sans-serif;
 }
 
 .text-handwritten {
@@ -1473,7 +1473,7 @@ img.lazy-loaded {
 .form-hold p,
 .form-hold select,
 .form-hold textarea {
-  font-family: "Inter", sans-serif;
+  font-family: "Rubik", sans-serif;
   font-weight: 400;
   border: #dbdbdb solid 1px;
   color: #4b4b4b;
@@ -1485,12 +1485,12 @@ img.lazy-loaded {
   text-align: left;
   display: block;
   margin-top: 10px;
-  font-family: "Inter", sans-serif;
+  font-family: "Rubik", sans-serif;
   font-weight: 400;
 }
 
 .form-hold input[type=file]::-webkit-file-upload-button, .form-hold input[type=file]::file-selector-button {
-  font-family: "Inter", sans-serif;
+  font-family: "Rubik", sans-serif;
   font-weight: 400;
   padding: 8px 9px 8px 38px;
   border-radius: 4px;
@@ -2112,7 +2112,7 @@ img.lazy-loaded {
     margin-bottom: 25px;
   }
   .content-styled ol > li:before {
-    font-family: "Inter", sans-serif;
+    font-family: "Rubik", sans-serif;
     font-size: 16px;
   }
   .content-styled ol > li:after {
@@ -2130,7 +2130,7 @@ img.lazy-loaded {
     font-style: italic;
   }
   .expander {
-    font-family: "Inter", sans-serif;
+    font-family: "Rubik", sans-serif;
     font-weight: 600;
     font-size: 16px;
     line-height: 25px;
@@ -3015,7 +3015,7 @@ img.lazy-loaded {
   }
   .module-slideshow .flex-hold-case-studies-author .flex-hold-case-studies-author-quote p {
     color: #232373;
-    font-weight: 800;
+    font-weight: 600;
     margin-bottom: 0;
   }
   .module-slideshow .cta-holder {
@@ -4031,7 +4031,7 @@ img.lazy-loaded {
     margin-bottom: 25px;
   }
   .content-styled ol > li:before {
-    font-family: "Inter", sans-serif;
+    font-family: "Rubik", sans-serif;
     font-size: 16px;
   }
   .content-styled ol > li:after {
@@ -4049,7 +4049,7 @@ img.lazy-loaded {
     font-style: italic;
   }
   .expander {
-    font-family: "Inter", sans-serif;
+    font-family: "Rubik", sans-serif;
     font-weight: 600;
     font-size: 16px;
     line-height: 25px;
@@ -5080,7 +5080,7 @@ img.lazy-loaded {
   }
   .module-slideshow .flex-hold-case-studies-author .flex-hold-case-studies-author-quote p {
     color: #232373;
-    font-weight: 800;
+    font-weight: 600;
     margin-bottom: 0;
   }
   .module-slideshow .cta-holder {
@@ -6986,7 +6986,7 @@ body[data-aos-easing=ease-in-out-quart] [data-aos] {
   bottom: 0;
   left: 0;
   font-weight: normal;
-  font-family: "Inter", sans-serif;
+  font-family: "Rubik", sans-serif;
   font-size: 12px;
   line-height: 18px;
   border: #4b4b4b solid 3px;
@@ -7053,7 +7053,7 @@ body[data-aos-easing=ease-in-out-quart] [data-aos] {
 }
 
 .paperplane-gdpr-content-message p {
-  font-family: "Inter", sans-serif;
+  font-family: "Rubik", sans-serif;
   font-weight: 600;
   font-size: 12px;
   line-height: 18px;
